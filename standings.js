@@ -24,6 +24,8 @@ async function loadStandings() {
     const points = new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
     for (const team of teams) {
       const row = document.createElement('tr');
+      row.dataset.manager = team.manager.toLowerCase();
+      row.dataset.team = team.team.toLowerCase();
       const values = [team.rank, team.manager, team.team,
         `${team.wins}–${team.losses}–${team.ties}`, points.format(team.pointsFor), points.format(team.pointsAgainst)];
       values.forEach((value,index) => {
@@ -38,6 +40,24 @@ async function loadStandings() {
     document.getElementById('standings-body').replaceChildren(fragment);
     status.textContent = `Through Week ${data.throughWeek} · Workbook updated ${data.sourceUpdatedAt}`;
     document.getElementById('table-region').hidden = false;
+    const search = document.getElementById('manager-search');
+    const results = document.getElementById('search-results');
+    const rows = [...document.getElementById('standings-body').children];
+    function filterStandings() {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      for (const row of rows) {
+        const matches = row.dataset.manager.includes(query) || row.dataset.team.includes(query);
+        row.hidden = !matches;
+        if (matches) visible++;
+      }
+      results.textContent = visible === 0
+        ? 'No matching managers or teams. Clear the search to show everyone.'
+        : `Showing ${visible} of ${rows.length} managers.`;
+    }
+    search.addEventListener('input', filterStandings);
+    document.getElementById('search-controls').hidden = false;
+    filterStandings();
   } catch (error) {
     status.textContent = 'Standings could not be loaded. Please try again later.';
     console.error(error);
