@@ -22,6 +22,12 @@
     thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
     .number { text-align:right; font-variant-numeric:tabular-nums; }
     footer,.muted { color:#c1cbd3; } footer { margin-top:24px; }
+    .bracket-chart { margin:24px 0; padding:20px; background:#192530; border:1px solid #46515b; border-radius:10px; }
+    .bar-track { height:24px; background:#101820; border:1px solid #687785; border-radius:4px; overflow:hidden; margin:6px 0 18px; }
+    .bar-fill { height:100%; } .playoffs { background:#f5d77a; } .sacko { background:#8fc7f4; }
+    .season-chips { display:flex; gap:10px; flex-wrap:wrap; padding:0; list-style:none; }
+    .season-chips li { border:1px solid #687785; border-left:6px solid #f5d77a; padding:8px 12px; border-radius:4px; }
+    .season-chips li.sacko-season { border-left-color:#8fc7f4; }
   </style>
   <script src="./managers.js" defer></script>
 </head>
@@ -46,9 +52,19 @@
       <p class="muted">Career record and win rate include completed seasons only. Ties count as half a win. Shared championships count as one title credit for each co-champion.</p>
       <p id="titles"></p>
       <p id="current-season"></p>
+      <section class="bracket-chart" aria-labelledby="bracket-heading">
+        <h3 id="bracket-heading">Where your completed seasons landed</h3>
+        <p id="bracket-summary"></p>
+        <p id="playoff-label"></p>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill playoffs" id="playoff-bar"></div></div>
+        <p id="sacko-label"></p>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill sacko" id="sacko-bar"></div></div>
+        <p class="muted">Both bars use all of this manager’s completed seasons as their full width. Playoffs = championship bracket. Sacko = loser tournament entry, regardless of eventual finish. 2026 is excluded.</p>
+        <ul class="season-chips" id="bracket-seasons" aria-label="Tournament by completed season"></ul>
+      </section>
       <div class="scroll" role="region" aria-label="Manager season history" tabindex="0">
         <table><caption>Season-by-season results · Newest first</caption>
-          <thead><tr><th scope="col">Season</th><th scope="col">Team</th><th scope="col">Reg. W–L–T</th><th scope="col">Reg. rank</th><th scope="col">Final placement</th><th scope="col" class="number">Reg. PF</th><th scope="col" class="number">Reg. PA</th></tr></thead>
+          <thead><tr><th scope="col">Season</th><th scope="col">Team</th><th scope="col">Reg. W–L–T</th><th scope="col">Reg. rank</th><th scope="col">Final placement</th><th scope="col" class="number">Reg. PF</th><th scope="col" class="number">Reg. PA</th><th scope="col">Tournament</th></tr></thead>
           <tbody id="manager-seasons"></tbody>
         </table>
       </div>
