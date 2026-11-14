@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Season History | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.6 system-ui,sans-serif; }
+    main { max-width:1200px; margin:auto; padding:32px 20px; }
+    a,a:visited { color:#f5d77a; text-underline-offset:3px; }
+    a:hover { color:white; }
+    a:focus-visible,select:focus-visible { outline:2px solid #f5d77a; outline-offset:4px; }
+    h1 { line-height:1.2; } .eyebrow { color:#f5d77a; font-weight:700; letter-spacing:.08em; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; }
+    select { display:block; margin:6px 0 20px; padding:12px; background:#25323e; color:white; border:1px solid #aab7c4; border-radius:6px; font:inherit; min-width:230px; }
+    .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:16px; font-weight:600; }
+    th,td { padding:12px 16px; text-align:left; border-top:1px solid #38434d; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    #champions { color:#f5d77a; font-weight:600; }
+    footer { color:#c1cbd3; margin-top:24px; }
+  </style>
+  <script src="./history.js" defer></script>
+</head>
+<body><main>
+  <nav aria-label="League pages"><a href="./">← League Headquarters</a><a href="./standings.html">2026 standings</a></nav>
+  <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
+  <h1>Season History</h1>
+  <p>Explore 2010–2026. Records and points are regular-season totals; final placement includes the postseason.</p>
+  <p id="load-status" role="status">Loading saved season history…</p>
+  <div id="history-content" hidden>
+    <label for="season-select">Choose a season</label>
+    <select id="season-select" aria-controls="history-body" aria-describedby="season-summary"></select>
+    <div role="status" aria-live="polite"><p id="season-summary"></p><p id="champions"></p><div id="season-notes"></div></div>
+    <div class="scroll" role="region" aria-label="Season results" tabindex="0">
+      <table>
+        <caption id="history-caption"></caption>
+        <thead><tr><th scope="col">Final placement</th><th scope="col">Regular-season rank</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Reg. W–L–T</th><th scope="col" class="number">Reg. PF</th><th scope="col" class="number">Reg. PA</th></tr></thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to choose a season, or <a href="./history.json">open the saved data</a>.</p></noscript>
+  <footer>Saved workbook snapshot, with no live refresh. PF = points for; PA = points against. — means unavailable; Pending means the season is unfinished. Scoring rules changed across seasons, so raw point totals are not directly comparable.</footer>
+</main></body>
+</html>
