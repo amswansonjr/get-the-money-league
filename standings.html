@@ -16,6 +16,28 @@
     thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
     .number { text-align:right; font-variant-numeric:tabular-nums; }
     footer { color:#c1cbd3; margin-top:24px; }
+    input[type="search"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #aab7c4;
+  border-radius: 6px;
+  background: #192530;
+  color: #ffffff;
+  font: inherit;
+}
+
+input[type="search"]::placeholder {
+  color: #c1cbd3;
+}
+
+input[type="search"]:focus-visible {
+  outline: 2px solid #f5d77a;
+  outline-offset: 3px;
+}
   </style>
   <script src="./standings.js" defer></script>
 </head>
@@ -24,6 +46,17 @@
   <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
   <h1>2026 Standings</h1>
   <p id="status" role="status">Loading saved standings…</p>
+  <div id="search-controls" hidden>
+  <label for="manager-search">Search managers or teams</label>
+  <input
+    id="manager-search"
+    type="search"
+    placeholder="Try Nelson or Ibrahim"
+    aria-controls="standings-body"
+    aria-describedby="search-results"
+  >
+  <p id="search-results" role="status" aria-live="polite"></p>
+</div>
   <div class="scroll" role="region" aria-label="Standings table" tabindex="0" hidden id="table-region">
     <table>
       <caption>Regular season · Season in progress</caption>
