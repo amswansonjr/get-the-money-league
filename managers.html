@@ -22,6 +22,8 @@
     thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
     .number { text-align:right; font-variant-numeric:tabular-nums; }
     footer,.muted { color:#c1cbd3; } footer { margin-top:24px; }
+    footer,.muted,.subtext,#load-status,#participation,#current-season { font-style:italic; }
+    label { font-weight:700; }
     .bracket-chart { margin:24px 0; padding:20px; background:#192530; border:1px solid #46515b; border-radius:10px; }
     .bar-track { height:24px; background:#101820; border:1px solid #687785; border-radius:4px; overflow:hidden; margin:6px 0 18px; }
     .bar-fill { height:100%; } .playoffs { background:#f5d77a; } .sacko { background:#8fc7f4; }
@@ -32,10 +34,10 @@
   <script src="./managers.js" defer></script>
 </head>
 <body><main>
-  <nav aria-label="League pages"><a href="./">← League Headquarters</a><a href="./standings.html">2026 Standings</a><a href="./history.html">Season History</a></nav>
+  <nav aria-label="League pages"><a href="./">← League Headquarters</a><a href="./standings.html">2026 standings</a><a href="./history.html">Season history</a></nav>
   <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
   <h1>Manager Profiles</h1>
-  <p>Explore every manager in the saved league history, including former members.</p>
+  <p class="subtext">Explore every manager in the saved league history, including former members.</p>
   <p id="load-status" role="status">Loading saved manager history…</p>
   <div id="profile-content" hidden>
     <label for="manager-select">Choose a manager</label>
@@ -71,6 +73,6 @@
     </section>
   </div>
   <noscript><p>Enable JavaScript to explore profiles, or <a href="./history.json">open the saved data</a>.</p></noscript>
-  <footer>Saved workbook snapshot; no live refresh. — means unavailable. PF = points for; PA = points against. Scoring rules changed across seasons; raw points are not directly comparable. The 2012 Alabama Hot Pockets owner remains unknown.</footer>
+  <footer>Saved workbook snapshot; no live refresh. — means unavailable. PF = points for; PA = points against. Scoring rules changed across seasons; raw points are not directly comparable.</footer>
 </main></body>
 </html>

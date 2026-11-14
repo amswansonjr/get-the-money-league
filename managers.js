@@ -100,7 +100,7 @@ async function loadManagers() {
       get('manager-seasons').replaceChildren(rows);
     }
     select.addEventListener('change',renderProfile); renderProfile();
-    get('manager-count').textContent=`${profiles.length} identities in the saved history, including one unknown owner.`;
+    get('manager-count').textContent=`${profiles.length} managers in the saved history, including current and former members.`;
     get('load-status').textContent=`Workbook snapshot updated ${data.sourceUpdatedAt}.`;
     get('profile-content').hidden=false;
   } catch (error) {

@@ -2537,7 +2537,7 @@
       ],
       "notes": [
         "Yahoo: season totals and final placements recovered; full weekly regular-season schedules are unavailable. Unavailable regular-season ranks are shown as —.",
-        "The owner of Alabama Hot Pockets remains unknown in the workbook."
+        "Alabama Hot Pockets owner: Timothy Doan, confirmed by the league owner November 14, 2026; this corrects the older workbook identity."
       ],
       "teams": [
         {
@@ -2569,8 +2569,8 @@
           "postseasonBracket": "Playoffs"
         },
         {
-          "managerId": "MGR-025",
-          "manager": "Unknown (2012)",
+          "managerId": "MGR-019",
+          "manager": "Timothy Doan",
           "team": "Alabama Hot Pockets",
           "wins": 8,
           "losses": 5,
@@ -3017,6 +3017,17 @@
           "postseasonBracket": "Sacko"
         }
       ]
+    }
+  ],
+  "identityCorrections": [
+    {
+      "season": 2012,
+      "team": "Alabama Hot Pockets",
+      "previousManagerId": "MGR-025",
+      "managerId": "MGR-019",
+      "manager": "Timothy Doan",
+      "confirmedOn": "2026-11-14",
+      "source": "User confirmation in this chat; source workbook unchanged."
     }
   ]
 }

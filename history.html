@@ -21,6 +21,8 @@
     .number { text-align:right; font-variant-numeric:tabular-nums; }
     #champions { color:#f5d77a; font-weight:600; }
     footer { color:#c1cbd3; margin-top:24px; }
+    footer,.subtext,#load-status,#season-notes { font-style:italic; }
+    label,#season-summary { font-weight:700; }
   </style>
   <script src="./history.js" defer></script>
 </head>
@@ -28,7 +30,7 @@
   <nav aria-label="League pages"><a href="./">← League Headquarters</a><a href="./standings.html">2026 standings</a></nav>
   <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
   <h1>Season History</h1>
-  <p>Explore 2010–2026. Records and points are regular-season totals; final placement includes the postseason.</p>
+  <p class="subtext">Explore 2010–2026. Records and points are regular-season totals; final placement includes the postseason.</p>
   <p id="load-status" role="status">Loading saved season history…</p>
   <div id="history-content" hidden>
     <label for="season-select">Choose a season</label>
