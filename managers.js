@@ -18,7 +18,7 @@ function buildProfiles(data) {
           !['pointsFor','pointsAgainst'].every(k => Number.isFinite(team[k]) && team[k] >= 0) ||
           !['regularRank','finalRank'].every(k => team[k] === null || (Number.isInteger(team[k]) && team[k] >= 1 && team[k] <= season.teams.length))) throw new Error('Invalid manager record');
       if (season.status === 'Complete' ? team.finalRank === null : team.finalRank !== null) throw new Error('Invalid placement');
-      if (season.status === 'Complete' ? !['Playoffs','Sacko'].includes(team.postseasonBracket) : team.postseasonBracket !== null) throw new Error('Missing or invalid tournament classification; update history.json');
+      if (season.status === 'Complete' ? !['Playoffs','Loser’s bracket'].includes(team.postseasonBracket) : team.postseasonBracket !== null) throw new Error('Missing or invalid tournament classification; update history.json');
       if (season.status !== 'Complete' && (!Number.isInteger(season.throughWeek) || team.games !== season.throughWeek)) throw new Error('Invalid snapshot week');
       ids.add(team.managerId); names.add(team.manager);
       if (!profiles.has(team.managerId)) profiles.set(team.managerId,{id:team.managerId,name:team.manager,seasons:[],wins:0,losses:0,ties:0,completed:0,playoffs:0,sacko:0,titles:[]});
@@ -72,18 +72,18 @@ async function loadManagers() {
       get('titles').textContent=profile.titles.length ? `Championship seasons: ${profile.titles.map(t=>`${t.year}${t.shared?' (shared)':''}`).join(', ')}.` : 'No championship credits in the saved history.';
       const current=profile.seasons.find(s=>s.status!=='Complete');
       get('current-season').textContent=current ? `${current.year} snapshot through Week ${current.throughWeek}: ${current.wins}–${current.losses}–${current.ties}. Excluded from the completed-season career totals above.` : 'No 2026 participation recorded in this snapshot.';
-      get('bracket-summary').textContent=profile.completed ? `${profile.completed} completed seasons · ${profile.playoffs} playoff appearances · ${profile.sacko} Sacko tournament appearances` : 'No completed seasons yet. Tournament appearance rates are not available.';
+      get('bracket-summary').textContent=profile.completed ? `${profile.completed} completed seasons · ${profile.playoffs} playoff appearances · ${profile.sacko} loser’s bracket appearances` : 'No completed seasons yet. Tournament appearance rates are not available.';
       const playoffRate=profile.completed ? profile.playoffs/profile.completed : null;
       const sackoRate=profile.completed ? profile.sacko/profile.completed : null;
       get('playoff-label').textContent=`Playoffs: ${profile.playoffs} seasons · ${playoffRate===null?'Rate unavailable':percent.format(playoffRate)}`;
-      get('sacko-label').textContent=`Sacko tournament: ${profile.sacko} seasons · ${sackoRate===null?'Rate unavailable':percent.format(sackoRate)}`;
+      get('sacko-label').textContent=`Loser’s bracket: ${profile.sacko} seasons · ${sackoRate===null?'Rate unavailable':percent.format(sackoRate)}`;
       get('playoff-bar').style.width=`${(playoffRate??0)*100}%`;
       get('sacko-bar').style.width=`${(sackoRate??0)*100}%`;
       const chips=document.createDocumentFragment();
       for (const season of [...profile.seasons].reverse().filter(s=>s.status==='Complete')) {
         const chip=document.createElement('li');
         chip.textContent=`${season.year} · ${season.postseasonBracket}`;
-        if (season.postseasonBracket==='Sacko') chip.className='sacko-season';
+        if (season.postseasonBracket==='Loser’s bracket') chip.className='sacko-season';
         chips.appendChild(chip);
       }
       get('bracket-seasons').replaceChildren(chips);

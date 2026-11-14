@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Head-to-Head | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.6 system-ui,sans-serif; }
+    main { max-width:1200px; margin:auto; padding:32px 20px; }
+    a,a:visited { color:#f5d77a; text-underline-offset:3px; } a:hover { color:white; }
+    :focus-visible { outline:2px solid #f5d77a; outline-offset:4px; }
+    h1,h2 { line-height:1.2; } .eyebrow { color:#f5d77a; font-weight:700; letter-spacing:.08em; }
+    nav,.controls { display:flex; gap:20px; flex-wrap:wrap; } label { font-weight:700; }
+    select { display:block; max-width:100%; margin:6px 0 18px; padding:12px; background:#25323e; color:white; border:1px solid #aab7c4; border-radius:6px; font:inherit; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .card { padding:18px; border:1px solid #46515b; border-radius:10px; background:#192530; }
+    .value { display:block; font-size:1.8rem; color:#f5d77a; font-weight:700; }
+    .track { height:20px; background:#101820; margin-top:12px; border:1px solid #687785; }
+    .fill { height:100%; background:#f5d77a; } .blue { background:#8fc7f4; }
+    .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; margin-top:24px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:16px; font-weight:600; }
+    th,td { padding:12px 16px; text-align:left; border-top:1px solid #38434d; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    footer,.subtext { font-style:italic; color:#c1cbd3; } footer { margin-top:24px; }
+  </style>
+  <script src="./h2h.js" defer></script>
+</head>
+<body><main>
+  <nav aria-label="League pages"><a href="./">← League Headquarters</a><a href="./standings.html">Current standings</a><a href="./history.html">Season history</a><a href="./managers.html">Manager profiles</a></nav>
+  <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
+  <h1>Head-to-Head</h1>
+  <p class="subtext">Choose two managers and explore their recorded rivalry.</p>
+  <p id="load-status" class="subtext" role="status">Loading saved matchups…</p>
+  <p class="subtext">2010–2012: recovered postseason games only. Regular-season H2H begins in 2013. 2026 is through Week 9. Missing games are not evidence that managers never met.</p>
+  <div id="h2h-content" hidden>
+    <div class="controls">
+      <label>First manager<select id="manager-a"></select></label>
+      <label>Second manager<select id="manager-b"></select></label>
+      <label>Competition<select id="competition"><option value="all">All games</option value="Regular season">Regular season</option><option value="Championship playoffs">Championship playoffs</option><option value="Loser’s bracket">Loser’s bracket</option><option value="championship">Championship final only</option><option value="sacko">Sacko matchup only</option></select></label>
+      <label>Season<select id="season"><option value="all">All seasons</option></select></label>
+    </div>
+    <p id="summary" role="status" aria-live="polite"></p>
+    <div id="results" hidden>
+      <div class="cards">
+        <div class="card"><h2 id="name-a"></h2><span class="value" id="wins-a"></span><p id="points-a"></p><div class="track" aria-hidden="true"><div class="fill" id="bar-a"></div></div></div>
+        <div class="card"><h2>Ties</h2><span class="value" id="ties"></span><p class="subtext">Bars show wins as a share of recorded games under the selected filters.</p></div>
+        <div class="card"><h2 id="name-b"></h2><span class="value" id="wins-b"></span><p id="points-b"></p><div class="track" aria-hidden="true"><div class="fill blue" id="bar-b"></div></div></div>
+      </div>
+      <p class="subtext">Recorded winners determine results. An awarded win at a tied score is labeled in the table. The 2022 shared title does not change its recorded matchup winner.</p>
+      <div class="scroll" role="region" aria-label="Recorded matchup history" tabindex="0"><table>
+        <caption>Recorded matchups · Newest first</caption>
+        <thead><tr><th scope="col">Season</th><th scope="col">Week</th><th scope="col">Competition</th><th scope="col" id="score-a-heading">First manager</th><th scope="col" id="score-b-heading">Second manager</th><th scope="col">Result</th><th scope="col">Note</th></tr></thead>
+        <tbody id="matchup-body"></tbody>
+      </table></div>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript to compare managers, or <a href="./h2h.json">open the saved data</a>.</p></noscript>
+  <footer>Saved workbook snapshot; no live refresh. Loser’s bracket means the consolation tournament. Sacko means its final matchup to avoid last place. Points reflect each season’s scoring rules.</footer>
+</main></body>
+</html>
