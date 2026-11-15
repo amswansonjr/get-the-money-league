@@ -17,6 +17,8 @@ async function loadH2H() {
     if(data.schemaVersion!==1||typeof data.sourceUpdatedAt!=='string'||!Array.isArray(data.managers)||data.managers.length<2||!Array.isArray(data.games))throw new Error('Invalid data');
     const names=new Map();
     for(const m of data.managers){if(typeof m.id!=='string'||typeof m.name!=='string'||names.has(m.id))throw new Error('Invalid identity');names.set(m.id,m.name)}
+    if(!Number.isInteger(data.currentSeason)||!Array.isArray(data.currentManagerIds)||!data.currentManagerIds.length||
+      new Set(data.currentManagerIds).size!==data.currentManagerIds.length||!data.currentManagerIds.every(id=>names.has(id)))throw new Error('Missing current-season roster; update h2h.json');
     const keys=new Set();
     for(const g of data.games){
       const key=[g.season,g.week,...[g.managerA,g.managerB].sort()].join(':');
@@ -65,8 +67,42 @@ async function loadH2H() {
       }
       get('matchup-body').replaceChildren(rows);
     }
-    for(const id of ['manager-a','manager-b','competition','season'])get(id).addEventListener('change',render);
-    render();get('h2h-content').hidden=false;
+    function renderMatrix(){
+      const managers=data.managers.filter(m=>get('matrix-scope').value==='all'||data.currentManagerIds.includes(m.id));
+      const competition=get('competition').value,season=get('season').value;
+      get('matrix-summary').textContent=`${managers.length} managers · ${get('matrix-scope').value==='all'?'Historical membership':`${data.currentSeason} membership`} · ${season==='all'?'All recorded seasons':season}. Membership limits the names shown; season and competition filters limit the games counted.`;
+      get('matrix-caption').textContent=`Row manager vs column opponent · W–L–T · ${competition==='all'?'All games':competition==='sacko'?'Sacko matchup only':competition==='championship'?'Championship final only':competition}`;
+      const header=document.createDocumentFragment(),headRow=document.createElement('tr');
+      const corner=document.createElement('th');corner.scope='col';corner.textContent='Row manager ↓ / Opponent →';headRow.appendChild(corner);
+      for(const m of managers){const th=document.createElement('th');th.scope='col';th.textContent=m.name;headRow.appendChild(th)}
+      header.appendChild(headRow);get('matrix-head').replaceChildren(header);
+      const body=document.createDocumentFragment();
+      for(const a of managers){
+        const row=document.createElement('tr'),label=document.createElement('th');label.scope='row';label.textContent=a.name;row.appendChild(label);
+        for(const b of managers){
+          const cell=document.createElement('td');
+          if(a.id!==b.id){
+            const r=rivalry(data.games,a.id,b.id,competition,season),button=document.createElement('button');button.type='button';
+            button.textContent=r.games.length?`${r.winsA}–${r.winsB}–${r.ties}`:'—';
+            button.className=r.winsA>r.winsB?'positive':r.winsA<r.winsB?'negative':'neutral';
+            button.setAttribute('aria-label',`${a.name} vs ${b.name}: ${r.games.length?`${r.winsA} wins, ${r.winsB} losses, ${r.ties} ties`:'no recorded matchups'}. Show rivalry.`);
+            button.setAttribute('aria-pressed',String(get('manager-a').value===a.id&&get('manager-b').value===b.id));
+            button.addEventListener('click',()=>{
+              get('manager-a').value=a.id;get('manager-b').value=b.id;render();
+              for(const old of get('matrix-body').querySelectorAll('button[aria-pressed="true"]'))old.setAttribute('aria-pressed','false');
+              button.setAttribute('aria-pressed','true');get('summary').scrollIntoView({block:'center'});
+            });cell.appendChild(button);
+          }
+          row.appendChild(cell);
+        }
+        body.appendChild(row);
+      }
+      get('matrix-body').replaceChildren(body);
+    }
+    for(const id of ['manager-a','manager-b'])get(id).addEventListener('change',()=>{render();renderMatrix()});
+    for(const id of ['competition','season'])get(id).addEventListener('change',()=>{render();renderMatrix()});
+    get('matrix-scope').addEventListener('change',renderMatrix);
+    render();renderMatrix();get('h2h-content').hidden=false;
     get('load-status').textContent=`Workbook snapshot updated ${data.sourceUpdatedAt}.`;
   }catch(error){get('h2h-content').hidden=true;get('load-status').textContent='Head-to-Head could not be loaded. Please try again later.';console.error(error)}
 }

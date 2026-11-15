@@ -23,6 +23,16 @@
     thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
     .number { text-align:right; font-variant-numeric:tabular-nums; }
     footer,.subtext { font-style:italic; color:#c1cbd3; } footer { margin-top:24px; }
+    .checkerboard { max-height:620px; overflow:auto; }
+    .checkerboard thead th { position:sticky; top:0; background:#25323e; z-index:2; }
+    .checkerboard th:first-child { position:sticky; left:0; background:#25323e; z-index:1; }
+    .checkerboard thead th:first-child { z-index:3; }
+    .checkerboard th,.checkerboard td { padding:8px; }
+    .checkerboard button { min-width:80px; padding:10px; border:1px solid #82909b; border-radius:4px; color:#fff; background:#34424f; font:inherit; cursor:pointer; }
+    .checkerboard button.positive { background:#174b36; color:#c8f5d9; }
+    .checkerboard button.negative { background:#642b33; color:#ffe0e3; }
+    .checkerboard button[aria-pressed="true"] { outline:3px solid #f5d77a; outline-offset:-3px; }
+    .checkerboard button:hover { text-decoration:underline; }
   </style>
   <script src="./h2h.js" defer></script>
 </head>
@@ -54,6 +64,17 @@
         <tbody id="matchup-body"></tbody>
       </table></div>
     </div>
+    <section aria-labelledby="checkerboard-heading">
+      <h2 id="checkerboard-heading">League rivalry checkerboard</h2>
+      <p class="subtext">Read across a row: each cell shows that manager’s W–L–T against the column opponent. Green = winning record; red = losing record; neutral = even. — = no recorded matchups. Click a cell to show the rivalry above.</p>
+      <label for="matrix-scope">Managers shown</label>
+      <select id="matrix-scope"><option value="current">Current-season managers</option><option value="all">All historical managers</option></select>
+      <p id="matrix-summary" class="subtext" role="status"></p>
+      <div class="scroll checkerboard" role="region" aria-label="Head-to-head checkerboard; scroll to see opponents" tabindex="0"><table>
+        <caption id="matrix-caption"></caption>
+        <thead id="matrix-head"></thead><tbody id="matrix-body"></tbody>
+      </table></div>
+    </section>
   </div>
   <noscript><p>Enable JavaScript to compare managers, or <a href="./h2h.json">open the saved data</a>.</p></noscript>
   <footer>Saved workbook snapshot; no live refresh. Loser’s bracket means the consolation tournament. Sacko means its final matchup to avoid last place. Points reflect each season’s scoring rules.</footer>

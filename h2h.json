@@ -18718,5 +18718,20 @@
       "sackoFinal": false,
       "source": "Yahoo final-results PDF pp. 2–3; actual scores"
     }
+  ],
+  "currentSeason": 2026,
+  "currentManagerIds": [
+    "MGR-002",
+    "MGR-008",
+    "MGR-010",
+    "MGR-012",
+    "MGR-009",
+    "MGR-007",
+    "MGR-005",
+    "MGR-006",
+    "MGR-003",
+    "MGR-001",
+    "MGR-004",
+    "MGR-011"
   ]
 }
