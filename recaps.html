@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly Recaps | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.65 system-ui,sans-serif; }
+    main { max-width:1250px; margin:auto; padding:28px 20px 50px; }
+    a,a:visited { color:#f5d77a; text-underline-offset:3px; } a:hover { color:white; }
+    :focus-visible { outline:2px solid #8be35e; outline-offset:4px; }
+    h1,h2,h3 { line-height:1.2; } h1 { font-size:clamp(2rem,5vw,3.6rem); margin:12px 0; }
+    .eyebrow { color:#8be35e; letter-spacing:.08em; font-weight:800; }
+    .subtext,footer,figcaption { color:#c1cbd3; font-style:italic; }
+    label { font-weight:700; }
+    select { display:block; background:#25323e; color:white; font:inherit; padding:10px 14px; margin:8px 0 22px; border:1px solid #81909c; border-radius:6px; }
+    .hero { border-top:4px solid #8be35e; padding-top:20px; margin-top:20px; }
+    .story { white-space:pre-line; font-size:1.1rem; max-width:75ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin:24px 0; }
+    .card { background:#192530; border:1px solid #46515b; padding:18px; border-radius:10px; }
+    .card h3 { color:#8be35e; font-size:1rem; margin:0 0 10px; }
+    .card p { margin:6px 0; } .value { font-size:1.6rem; font-weight:800; }
+    .columns { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:28px; align-items:start; }
+    figure { margin:0; } figure img { width:100%; height:auto; display:block; border-radius:10px; }
+    figcaption { padding:12px 0; } .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; margin:16px 0 28px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:14px; font-weight:700; }
+    th,td { padding:11px 14px; border-top:1px solid #38434d; text-align:left; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .winner { color:#91e2ac; font-weight:700; } .number { font-variant-numeric:tabular-nums; }
+    .art-empty { padding:24px; border:1px dashed #687785; border-radius:10px; }
+    @media(max-width:850px) { .columns { grid-template-columns:1fr; } }
+  </style>
+  <link rel="stylesheet" href="./navigation.css">
+  <script src="./navigation.js" defer></script>
+  <script src="./recaps.js" defer></script>
+</head>
+<body><main>
+  <nav class="league-nav" aria-label="League pages"><a href="./">Home</a><a href="./standings.html">Current Standings</a><a href="./history.html">Season History</a><a href="./managers.html">Manager Profiles</a><a href="./h2h.html">Head-to-Head</a><a href="./recaps.html">Weekly Recaps</a></nav>
+  <p class="eyebrow">GET THE $$$$ · SOME DISRESPECTFUL BASTARDS</p>
+  <h1>Weekly Recaps</h1>
+  <p class="subtext">The scores. The stories. The evidence. Written recaps and illustrated covers, together.</p>
+  <p id="load-status" class="subtext" role="status">Loading saved recaps…</p>
+  <div id="recap-content" hidden>
+    <label for="recap-week">Choose a week</label><select id="recap-week" aria-controls="recap-article"></select>
+    <p id="week-announcement" role="status" aria-live="polite"></p>
+    <article id="recap-article" class="hero">
+      <p id="edition" class="eyebrow"></p><h2 id="headline"></h2><p id="story" class="story"></p>
+      <div class="cards">
+        <div class="card"><h3>High score</h3><p id="high-manager"></p><p id="high-points" class="value"></p></div>
+        <div class="card"><h3>Closest game</h3><p id="close-manager"></p><p id="close-margin" class="value"></p><p class="subtext">point winning margin</p></div>
+        <div class="card"><h3>Biggest win</h3><p id="big-manager"></p><p id="big-margin" class="value"></p><p class="subtext">point winning margin</p></div>
+      </div>
+      <div class="columns">
+        <section aria-labelledby="scoreboard-heading"><h2 id="scoreboard-heading">The scoreboard</h2>
+          <div class="scroll" tabindex="0" role="region" aria-label="Weekly scoreboard"><table><caption id="score-caption"></caption><thead><tr><th scope="col">Manager</th><th scope="col">Score</th><th scope="col">Opponent</th><th scope="col">Score</th></tr></thead><tbody id="scores"></tbody></table></div>
+          <p id="week-totals" class="subtext"></p>
+          <p><a href="./h2h.html">Explore the rivalries in Head-to-Head</a> · <a href="./managers.html">Explore manager profiles</a></p>
+          <h2>Standings watch</h2><p class="subtext">Through the selected week. Ordered by regular-season W–L–T, then points for; this is a recap ordering, not a historical final placement.</p>
+          <div class="scroll" tabindex="0" role="region" aria-label="Standings after selected week"><table><caption id="standings-caption"></caption><thead><tr><th scope="col">Position</th><th scope="col">Manager</th><th scope="col">W–L–T</th><th scope="col">PF</th></tr></thead><tbody id="recap-standings"></tbody></table></div>
+        </section>
+        <section aria-labelledby="art-heading"><h2 id="art-heading">Illustrated edition</h2>
+          <figure id="art-figure" hidden><a id="art-link" target="_blank" rel="noopener"><img id="artwork" alt="" loading="lazy"></a><figcaption>Existing AI-generated league artwork. Open the image to view or save it. Contains strong language and performance-based league trash talk; commentary is opinion.</figcaption></figure>
+          <p id="art-unavailable" class="subtext art-empty" hidden>No illustrated cover is attached to this archived week yet. The written recap and verified scoreboard are available.</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <noscript><p>Enable JavaScript to select recaps, or <a href="./recaps.json">open the saved recap data</a>.</p></noscript>
+  <footer>Draft recap collection for review. Saved workbook results through Week 9; no live refresh or scheduled publication. Artwork and narrative do not replace the verified scoreboard.</footer>
+</main></body></html>
