@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weekly Recaps | GET THE $$$$</title>
+  <title>Recap Archive | GET THE $$$$</title>
   <style>
     body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.65 system-ui,sans-serif; }
     main { max-width:1250px; margin:auto; padding:28px 20px 50px; }
@@ -12,6 +12,7 @@
     .eyebrow { color:#8be35e; letter-spacing:.08em; font-weight:800; }
     .subtext,footer,figcaption { color:#c1cbd3; font-style:italic; }
     label { font-weight:700; }
+    .archive-controls { display:flex; gap:24px; flex-wrap:wrap; }
     select { display:block; background:#25323e; color:white; font:inherit; padding:10px 14px; margin:8px 0 22px; border:1px solid #81909c; border-radius:6px; }
     .hero { border-top:4px solid #8be35e; padding-top:20px; margin-top:20px; }
     .story { white-space:pre-line; font-size:1.1rem; max-width:75ch; }
@@ -37,11 +38,14 @@
 <body><main>
   <nav class="league-nav" aria-label="League pages"><a href="./">Home</a><a href="./standings.html">Current Standings</a><a href="./history.html">Season History</a><a href="./managers.html">Manager Profiles</a><a href="./h2h.html">Head-to-Head</a><a href="./recaps.html">Weekly Recaps</a></nav>
   <p class="eyebrow">GET THE $$$$ · SOME DISRESPECTFUL BASTARDS</p>
-  <h1>Weekly Recaps</h1>
+  <h1>Recap Archive</h1>
   <p class="subtext">The scores. The stories. The evidence. Written recaps and illustrated covers, together.</p>
   <p id="load-status" class="subtext" role="status">Loading saved recaps…</p>
   <div id="recap-content" hidden>
-    <label for="recap-week">Choose a week</label><select id="recap-week" aria-controls="recap-article"></select>
+    <div class="archive-controls">
+      <div><label for="recap-year">Choose a year</label><select id="recap-year" aria-controls="recap-week recap-article"></select></div>
+      <div><label for="recap-week">Choose a week</label><select id="recap-week" aria-controls="recap-article"></select></div>
+    </div>
     <p id="week-announcement" role="status" aria-live="polite"></p>
     <article id="recap-article" class="hero">
       <p id="edition" class="eyebrow"></p><h2 id="headline"></h2><p id="story" class="story"></p>
