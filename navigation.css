@@ -1,0 +1,38 @@
+/* Shared navigation for every League Headquarters page. */
+.league-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 12px;
+  border: 1px solid #46515b;
+  border-radius: 10px;
+  background: #192530;
+  text-align: left;
+}
+.league-nav a,
+.league-nav a:visited {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #f5d77a;
+  font: 600 16px/1.5 system-ui, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.league-nav a:hover {
+  color: #ffffff;
+  background: #25323e;
+}
+.league-nav a[aria-current="page"],
+.league-nav a[aria-current="page"]:visited {
+  color: #101820;
+  background: #f5d77a;
+  border-color: #f5d77a;
+  text-decoration: none;
+}
+.league-nav a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
