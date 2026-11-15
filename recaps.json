@@ -1976,8 +1976,11 @@
           "rank": 12
         }
       ],
-      "artwork": null,
-      "artworkAlt": null
+      "artwork": "recap-week-07-2026.png",
+      "artworkAlt": "Original illustrated Week 7 2026 league recap; contains numerical errors detailed in the adjacent correction notes.",
+      "artworkNotes": [
+        "Original artwork correction: Ely Ibrahim’s PA through Week 7 is 763.46, not 743.46. Use the written scoreboard and standings for verified figures."
+      ]
     },
     {
       "season": 2026,
@@ -2244,8 +2247,12 @@
           "rank": 12
         }
       ],
-      "artwork": null,
-      "artworkAlt": null
+      "artwork": "recap-week-08-2026.png",
+      "artworkAlt": "Original illustrated Week 8 2026 league recap; contains numerical errors detailed in the adjacent correction notes.",
+      "artworkNotes": [
+        "Original artwork contains incorrect standings totals and movement arrows. The verified standings for this week are shown in the written edition.",
+        "Award corrections: Aniwar Ibrahim won the closest game, 120.86–120.50 (0.36). Andrew Swanson had the lowest winning score, 75.58. The “best manager” and “worst manager” awards are editorial labels, not verified performance metrics."
+      ]
     },
     {
       "season": 2026,

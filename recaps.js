@@ -14,6 +14,7 @@ async function loadRecaps() {
         ids.add(g.managerA);ids.add(g.managerB);
       }
       if(r.artwork!==null&&(r.artwork!==`recap-week-${String(r.week).padStart(2,'0')}-${r.season}.png`||typeof r.artworkAlt!=='string'))throw new Error('Invalid artwork path');
+      if(r.artworkNotes!==undefined&&(!Array.isArray(r.artworkNotes)||!r.artworkNotes.every(note=>typeof note==='string')))throw new Error('Invalid artwork notes');
     }
     const recaps=[...data.recaps].sort((a,b)=>b.season-a.season||b.week-a.week),select=get('recap-week'),yearSelect=get('recap-year');
     const options=document.createDocumentFragment();
@@ -46,6 +47,9 @@ async function loadRecaps() {
       tableRows('recap-standings',r.standings.map(t=>[{text:t.rank},{text:t.manager},{text:`${t.wins}–${t.losses}–${t.ties}`},{text:number.format(t.pointsFor)}]));
       get('art-figure').hidden=!r.artwork;get('art-unavailable').hidden=Boolean(r.artwork);
       get('art-unavailable').textContent='No illustrated cover is attached to this archived week. The written recap and verified scoreboard are available.';
+      const notes=document.createDocumentFragment();
+      for(const note of r.artworkNotes??[]){const p=document.createElement('p');p.textContent=note;notes.appendChild(p)}
+      get('art-corrections').replaceChildren(notes);get('art-corrections').hidden=!(r.artworkNotes?.length);
       if(r.artwork){get('artwork').src=`./${r.artwork}`;get('artwork').alt=r.artworkAlt;get('art-link').href=`./${r.artwork}`;}
     }
     get('artwork').addEventListener('error',()=>{get('art-figure').hidden=true;get('art-unavailable').hidden=false;get('art-unavailable').textContent='Artwork could not be loaded. The written recap and scoreboard remain available.'});
