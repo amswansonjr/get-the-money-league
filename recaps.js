@@ -37,6 +37,14 @@ async function loadRecaps() {
       get('recap-footer').textContent=`Draft recap collection for review. Saved ${r.season} workbook results through Week ${r.week}; no live refresh or scheduled publication. Artwork and narrative do not replace the verified scoreboard.`;
       get('week-announcement').textContent=`Showing ${r.season}, Week ${r.week}: ${r.headline}`;
       get('headline').textContent=r.headline;get('story').textContent=r.story;
+      const dispatches=document.createDocumentFragment();
+      for(const dispatch of buildRecapBanter(r,names)){
+        const article=document.createElement('article'),heading=document.createElement('h3'),list=document.createElement('ul');
+        heading.textContent=dispatch.headline;article.appendChild(heading);
+        for(const line of dispatch.lines){const item=document.createElement('li');item.textContent=line;list.appendChild(item)}
+        article.appendChild(list);dispatches.appendChild(article);
+      }
+      get('weekly-banter').replaceChildren(dispatches);
       get('high-manager').textContent=r.highScore.manager;get('high-points').textContent=number.format(r.highScore.points);
       get('close-manager').textContent=`${names.get(r.closest.winner)} over ${names.get(r.closest.winner===r.closest.managerA?r.closest.managerB:r.closest.managerA)}`;
       get('close-margin').textContent=number.format(Math.abs(r.closest.scoreA-r.closest.scoreB));

@@ -29,11 +29,17 @@
     thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
     .winner { color:#91e2ac; font-weight:700; } .number { font-variant-numeric:tabular-nums; }
     .art-empty { padding:24px; border:1px dashed #687785; border-radius:10px; }
+    .banter { margin-bottom:28px; }
+    .banter article { border-left:3px solid #8be35e; background:#192530; padding:16px 20px; margin:16px 0; border-radius:0 10px 10px 0; }
+    .banter h3 { color:#f5d77a; margin:0 0 12px; }
+    .banter ul { padding-left:22px; margin:0; }
+    .banter li + li { margin-top:12px; }
     .art-corrections { border-left:4px solid #f5d77a; background:#192530; padding:12px 16px; margin-bottom:16px; }
     @media(max-width:850px) { .columns { grid-template-columns:1fr; } }
   </style>
   <link rel="stylesheet" href="./navigation.css">
   <script src="./navigation.js" defer></script>
+  <script src="./recap-banter.js" defer></script>
   <script src="./recaps.js" defer></script>
 <link rel="stylesheet" href="./site.css">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -65,11 +71,17 @@
           <h2>Standings watch</h2><p class="subtext">Through the selected week. Ordered by regular-season W–L–T, then points for; this is a recap ordering, not a historical final placement.</p>
           <div class="scroll" tabindex="0" role="region" aria-label="Standings after selected week"><table><caption id="standings-caption"></caption><thead><tr><th scope="col">Position</th><th scope="col">Manager</th><th scope="col">W–L–T</th><th scope="col">PF</th></tr></thead><tbody id="recap-standings"></tbody></table></div>
         </section>
+        <div>
+        <section class="banter" aria-labelledby="banter-heading"><h2 id="banter-heading">Some Disrespectful Dispatches</h2>
+          <p class="subtext">Twelve teams. Six receipts. Nobody gets a bye from the group chat. Score-based league banter for the selected week.</p>
+          <div id="weekly-banter"></div>
+        </section>
         <section aria-labelledby="art-heading"><h2 id="art-heading">Illustrated edition</h2>
           <div id="art-corrections" class="art-corrections" hidden></div>
           <figure id="art-figure" hidden><a id="art-link" target="_blank" rel="noopener"><img id="artwork" alt="" loading="lazy"></a><figcaption>Existing AI-generated league artwork. Open the image to view or save it. Contains strong language and performance-based league trash talk; commentary is opinion.</figcaption></figure>
           <p id="art-unavailable" class="subtext art-empty" hidden>No illustrated cover is attached to this archived week yet. The written recap and verified scoreboard are available.</p>
         </section>
+        </div>
       </div>
     </article>
   </div>
