@@ -34,6 +34,7 @@ async function loadRecaps() {
     function render(){
       const r=recaps.find(r=>String(r.season)===yearSelect.value&&String(r.week)===select.value);
       get('edition').textContent=`${r.season} · WEEK ${r.week} · RECAP DRAFT`;
+      get('recap-footer').textContent=`Draft recap collection for review. Saved ${r.season} workbook results through Week ${r.week}; no live refresh or scheduled publication. Artwork and narrative do not replace the verified scoreboard.`;
       get('week-announcement').textContent=`Showing ${r.season}, Week ${r.week}: ${r.headline}`;
       get('headline').textContent=r.headline;get('story').textContent=r.story;
       get('high-manager').textContent=r.highScore.manager;get('high-points').textContent=number.format(r.highScore.points);
