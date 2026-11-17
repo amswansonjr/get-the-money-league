@@ -1,17 +1,22 @@
 {
   "schemaVersion": 1,
   "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
-  "sourceSha256": "2cbdadda1bdca76df49cd700a6cc25be264851d849dee7644db733f36cd6eb81",
-  "sourceUpdatedAt": "2026-11-10 11:17 CST",
-  "coverage": "2010–2012: recovered postseason games only; regular-season H2H begins in 2013. 2026 through Week 9. Missing matchups are not zero games played.",
-  "identityCorrections": [
-    {
-      "season": 2012,
-      "previousManagerId": "MGR-025",
-      "managerId": "MGR-019",
-      "confirmedOn": "2026-11-14",
-      "source": "User confirmation: Alabama Hot Pockets belongs to Timothy Doan."
-    }
+  "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
+  "sourceUpdatedAt": "2026-11-17 06:21 CST",
+  "currentSeason": 2026,
+  "currentManagerIds": [
+    "MGR-001",
+    "MGR-002",
+    "MGR-003",
+    "MGR-004",
+    "MGR-005",
+    "MGR-006",
+    "MGR-007",
+    "MGR-008",
+    "MGR-009",
+    "MGR-010",
+    "MGR-011",
+    "MGR-012"
   ],
   "managers": [
     {
@@ -18369,6 +18374,90 @@
       "source": "Sleeper 2026 snapshot"
     },
     {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-009",
+      "managerB": "MGR-005",
+      "scoreA": 107.82,
+      "scoreB": 100.44,
+      "winner": "MGR-009",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-010",
+      "managerB": "MGR-004",
+      "scoreA": 150.06,
+      "scoreB": 96.92,
+      "winner": "MGR-010",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-008",
+      "managerB": "MGR-007",
+      "scoreA": 160.38,
+      "scoreB": 71.6,
+      "winner": "MGR-008",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-003",
+      "managerB": "MGR-011",
+      "scoreA": 87.22,
+      "scoreB": 160.82,
+      "winner": "MGR-011",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-002",
+      "managerB": "MGR-001",
+      "scoreA": 132.76,
+      "scoreB": 88.0,
+      "winner": "MGR-002",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "phase": "Regular season",
+      "managerA": "MGR-012",
+      "managerB": "MGR-006",
+      "scoreA": 102.92,
+      "scoreB": 116.16,
+      "winner": "MGR-006",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
       "season": 2010,
       "week": 15,
       "phase": "Championship playoffs",
@@ -18719,19 +18808,16 @@
       "source": "Yahoo final-results PDF pp. 2–3; actual scores"
     }
   ],
-  "currentSeason": 2026,
-  "currentManagerIds": [
-    "MGR-002",
-    "MGR-008",
-    "MGR-010",
-    "MGR-012",
-    "MGR-009",
-    "MGR-007",
-    "MGR-005",
-    "MGR-006",
-    "MGR-003",
-    "MGR-001",
-    "MGR-004",
-    "MGR-011"
-  ]
+  "identityCorrections": [
+    {
+      "season": 2012,
+      "previousManagerId": "MGR-025",
+      "managerId": "MGR-019",
+      "manager": "Timothy Doan",
+      "team": "Alabama Hot Pockets",
+      "confirmedOn": "2026-11-14",
+      "source": "User confirmation; export-only correction, original workbook unchanged."
+    }
+  ],
+  "coverage": "2010–2012: recovered postseason only; regular-season H2H begins in 2013. 2026 through Week 10."
 }

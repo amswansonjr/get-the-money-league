@@ -1,9 +1,11 @@
 {
   "schemaVersion": 1,
   "season": 2026,
-  "throughWeek": 9,
-  "sourceUpdatedAt": "2026-11-10 11:17 CST",
-  "editorialStatus": "Draft recap collection for review; statistics checked against the saved workbook snapshot.",
+  "throughWeek": 10,
+  "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
+  "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
+  "sourceUpdatedAt": "2026-11-17 06:21 CST",
+  "editorialStatus": "Draft recap archive for review; no automatic publication.",
   "managers": [
     {
       "id": "MGR-005",
@@ -2521,6 +2523,274 @@
       ],
       "artwork": "recap-week-09-2026.png",
       "artworkAlt": "Week 9 Tuesday Morning Crime Scene illustrated recap with league mascots, awards and six matchup results."
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "headline": "Week 10: DJ Searcy leads the scoring",
+      "story": "DJ Searcy posted the week's high score of 160.82. The closest matchup finished with a 7.38-point margin; the biggest margin was 88.78.",
+      "highScore": {
+        "managerId": "MGR-011",
+        "manager": "DJ Searcy",
+        "points": 160.82
+      },
+      "lowScore": {
+        "managerId": "MGR-007",
+        "manager": "Ely Ibrahim",
+        "points": 71.6
+      },
+      "closest": {
+        "season": 2026,
+        "week": 10,
+        "phase": "Regular season",
+        "managerA": "MGR-009",
+        "managerB": "MGR-005",
+        "scoreA": 107.82,
+        "scoreB": 100.44,
+        "winner": "MGR-009",
+        "awardedWinner": false,
+        "championshipFinal": false,
+        "sackoFinal": false,
+        "source": "Sleeper 2026 snapshot"
+      },
+      "biggestWin": {
+        "season": 2026,
+        "week": 10,
+        "phase": "Regular season",
+        "managerA": "MGR-008",
+        "managerB": "MGR-007",
+        "scoreA": 160.38,
+        "scoreB": 71.6,
+        "winner": "MGR-008",
+        "awardedWinner": false,
+        "championshipFinal": false,
+        "sackoFinal": false,
+        "source": "Sleeper 2026 snapshot"
+      },
+      "leagueTotal": 1375.1,
+      "median": 105.37,
+      "games": [
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-009",
+          "managerB": "MGR-005",
+          "scoreA": 107.82,
+          "scoreB": 100.44,
+          "winner": "MGR-009",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        },
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-010",
+          "managerB": "MGR-004",
+          "scoreA": 150.06,
+          "scoreB": 96.92,
+          "winner": "MGR-010",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        },
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-008",
+          "managerB": "MGR-007",
+          "scoreA": 160.38,
+          "scoreB": 71.6,
+          "winner": "MGR-008",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        },
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-003",
+          "managerB": "MGR-011",
+          "scoreA": 87.22,
+          "scoreB": 160.82,
+          "winner": "MGR-011",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        },
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-002",
+          "managerB": "MGR-001",
+          "scoreA": 132.76,
+          "scoreB": 88.0,
+          "winner": "MGR-002",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        },
+        {
+          "season": 2026,
+          "week": 10,
+          "phase": "Regular season",
+          "managerA": "MGR-012",
+          "managerB": "MGR-006",
+          "scoreA": 102.92,
+          "scoreB": 116.16,
+          "winner": "MGR-006",
+          "awardedWinner": false,
+          "championshipFinal": false,
+          "sackoFinal": false,
+          "source": "Sleeper 2026 snapshot"
+        }
+      ],
+      "standings": [
+        {
+          "managerId": "MGR-002",
+          "manager": "Ryan Nelson",
+          "team": "400 DEGREEZ",
+          "wins": 9,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 1272.1,
+          "pointsAgainst": 973.04,
+          "rank": 1
+        },
+        {
+          "managerId": "MGR-006",
+          "manager": "Aniwar Ibrahim",
+          "team": "W's in spite of Marv",
+          "wins": 8,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 1158.58,
+          "pointsAgainst": 1013.82,
+          "rank": 2
+        },
+        {
+          "managerId": "MGR-009",
+          "manager": "Terrance Green",
+          "team": "GreenMamba",
+          "wins": 6,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1106.76,
+          "pointsAgainst": 1134.6,
+          "rank": 3
+        },
+        {
+          "managerId": "MGR-010",
+          "manager": "Bryan Norman",
+          "team": "The Struggle is Real",
+          "wins": 6,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1105.5,
+          "pointsAgainst": 1054.88,
+          "rank": 4
+        },
+        {
+          "managerId": "MGR-001",
+          "manager": "Andrew Swanson",
+          "team": "Son of a Swan",
+          "wins": 6,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1019.98,
+          "pointsAgainst": 958.52,
+          "rank": 5
+        },
+        {
+          "managerId": "MGR-008",
+          "manager": "Mike Taylor",
+          "team": "The Trade Federation 🏆🏆",
+          "wins": 5,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1235.88,
+          "pointsAgainst": 1072.68,
+          "rank": 6
+        },
+        {
+          "managerId": "MGR-005",
+          "manager": "Aaron Blank",
+          "team": "Pukakke",
+          "wins": 5,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1091.22,
+          "pointsAgainst": 1142.6,
+          "rank": 7
+        },
+        {
+          "managerId": "MGR-004",
+          "manager": "Rhea Nelson",
+          "team": "Catalina Wine Mixer",
+          "wins": 4,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1103.48,
+          "pointsAgainst": 1259.78,
+          "rank": 8
+        },
+        {
+          "managerId": "MGR-011",
+          "manager": "DJ Searcy",
+          "team": "Free R Kelly",
+          "wins": 4,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 955.74,
+          "pointsAgainst": 1083.36,
+          "rank": 9
+        },
+        {
+          "managerId": "MGR-003",
+          "manager": "Henry Omehe",
+          "team": "The Hurts Locker",
+          "wins": 3,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 971.92,
+          "pointsAgainst": 1076.92,
+          "rank": 10
+        },
+        {
+          "managerId": "MGR-012",
+          "manager": "Craig Lyons",
+          "team": "Run CMC",
+          "wins": 2,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1041.76,
+          "pointsAgainst": 1180.3,
+          "rank": 11
+        },
+        {
+          "managerId": "MGR-007",
+          "manager": "Ely Ibrahim",
+          "team": "Bi-Polar Boyz",
+          "wins": 2,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1018.48,
+          "pointsAgainst": 1130.9,
+          "rank": 12
+        }
+      ],
+      "artwork": null,
+      "artworkAlt": null
     }
   ]
 }

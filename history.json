@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
   "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
-  "sourceSha256": "2cbdadda1bdca76df49cd700a6cc25be264851d849dee7644db733f36cd6eb81",
-  "sourceUpdatedAt": "2026-11-10 11:17 CST",
+  "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
+  "sourceUpdatedAt": "2026-11-17 06:21 CST",
   "seasons": [
     {
       "year": 2026,
       "status": "In progress",
-      "throughWeek": 9,
+      "throughWeek": 10,
       "platform": "Sleeper",
       "champions": [],
       "notes": [
-        "Season in progress through Week 9. Final placement is not yet available."
+        "Season in progress through Week 10. Final placement is pending."
       ],
       "teams": [
         {
           "managerId": "MGR-002",
           "manager": "Ryan Nelson",
           "team": "400 DEGREEZ",
-          "wins": 8,
+          "wins": 9,
           "losses": 1,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 1139.34,
-          "pointsAgainst": 885.04,
+          "games": 10,
+          "pointsFor": 1272.1,
+          "pointsAgainst": 973.04,
           "regularRank": 1,
           "finalRank": null,
           "postseasonBracket": null
@@ -32,13 +32,13 @@
           "managerId": "MGR-008",
           "manager": "Mike Taylor",
           "team": "The Trade Federation 🏆🏆",
-          "wins": 4,
+          "wins": 5,
           "losses": 5,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 1075.5,
-          "pointsAgainst": 1001.08,
-          "regularRank": 7,
+          "games": 10,
+          "pointsFor": 1235.88,
+          "pointsAgainst": 1072.68,
+          "regularRank": 6,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -46,13 +46,13 @@
           "managerId": "MGR-010",
           "manager": "Bryan Norman",
           "team": "The Struggle is Real",
-          "wins": 5,
+          "wins": 6,
           "losses": 4,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 955.44,
-          "pointsAgainst": 957.96,
-          "regularRank": 6,
+          "games": 10,
+          "pointsFor": 1105.5,
+          "pointsAgainst": 1054.88,
+          "regularRank": 4,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -61,12 +61,12 @@
           "manager": "Craig Lyons",
           "team": "Run CMC",
           "wins": 2,
-          "losses": 7,
+          "losses": 8,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 938.84,
-          "pointsAgainst": 1064.14,
-          "regularRank": 12,
+          "games": 10,
+          "pointsFor": 1041.76,
+          "pointsAgainst": 1180.3,
+          "regularRank": 11,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -74,13 +74,13 @@
           "managerId": "MGR-009",
           "manager": "Terrance Green",
           "team": "GreenMamba",
-          "wins": 5,
+          "wins": 6,
           "losses": 4,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 998.94,
-          "pointsAgainst": 1034.16,
-          "regularRank": 4,
+          "games": 10,
+          "pointsFor": 1106.76,
+          "pointsAgainst": 1134.6,
+          "regularRank": 3,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -89,12 +89,12 @@
           "manager": "Ely Ibrahim",
           "team": "Bi-Polar Boyz",
           "wins": 2,
-          "losses": 7,
+          "losses": 8,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 946.88,
-          "pointsAgainst": 970.52,
-          "regularRank": 11,
+          "games": 10,
+          "pointsFor": 1018.48,
+          "pointsAgainst": 1130.9,
+          "regularRank": 12,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -103,12 +103,12 @@
           "manager": "Aaron Blank",
           "team": "Pukakke",
           "wins": 5,
-          "losses": 4,
+          "losses": 5,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 990.78,
-          "pointsAgainst": 1034.78,
-          "regularRank": 5,
+          "games": 10,
+          "pointsFor": 1091.22,
+          "pointsAgainst": 1142.6,
+          "regularRank": 7,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -116,12 +116,12 @@
           "managerId": "MGR-006",
           "manager": "Aniwar Ibrahim",
           "team": "W's in spite of Marv",
-          "wins": 7,
+          "wins": 8,
           "losses": 2,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 1042.42,
-          "pointsAgainst": 910.9,
+          "games": 10,
+          "pointsFor": 1158.58,
+          "pointsAgainst": 1013.82,
           "regularRank": 2,
           "finalRank": null,
           "postseasonBracket": null
@@ -131,12 +131,12 @@
           "manager": "Henry Omehe",
           "team": "The Hurts Locker",
           "wins": 3,
-          "losses": 6,
+          "losses": 7,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 884.7,
-          "pointsAgainst": 916.1,
-          "regularRank": 9,
+          "games": 10,
+          "pointsFor": 971.92,
+          "pointsAgainst": 1076.92,
+          "regularRank": 10,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -145,12 +145,12 @@
           "manager": "Andrew Swanson",
           "team": "Son of a Swan",
           "wins": 6,
-          "losses": 3,
+          "losses": 4,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 931.98,
-          "pointsAgainst": 825.76,
-          "regularRank": 3,
+          "games": 10,
+          "pointsFor": 1019.98,
+          "pointsAgainst": 958.52,
+          "regularRank": 5,
           "finalRank": null,
           "postseasonBracket": null
         },
@@ -159,11 +159,11 @@
           "manager": "Rhea Nelson",
           "team": "Catalina Wine Mixer",
           "wins": 4,
-          "losses": 5,
+          "losses": 6,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 1006.56,
-          "pointsAgainst": 1109.72,
+          "games": 10,
+          "pointsFor": 1103.48,
+          "pointsAgainst": 1259.78,
           "regularRank": 8,
           "finalRank": null,
           "postseasonBracket": null
@@ -172,13 +172,13 @@
           "managerId": "MGR-011",
           "manager": "DJ Searcy",
           "team": "Free R Kelly",
-          "wins": 3,
+          "wins": 4,
           "losses": 6,
           "ties": 0,
-          "games": 9,
-          "pointsFor": 794.92,
-          "pointsAgainst": 996.14,
-          "regularRank": 10,
+          "games": 10,
+          "pointsFor": 955.74,
+          "pointsAgainst": 1083.36,
+          "regularRank": 9,
           "finalRank": null,
           "postseasonBracket": null
         }
@@ -734,7 +734,7 @@
         "Ryan Nelson"
       ],
       "notes": [
-        "Shared champions: Andrew Swanson and Ryan Nelson. Recorded final ranks and matchup winner remain unchanged."
+        "Shared champions: Andrew Swanson and Ryan Nelson. Recorded final placements and matchup winner remain unchanged."
       ],
       "teams": [
         {
@@ -2536,8 +2536,8 @@
         "Johnathan Ripley"
       ],
       "notes": [
-        "Yahoo: season totals and final placements recovered; full weekly regular-season schedules are unavailable. Unavailable regular-season ranks are shown as —.",
-        "Alabama Hot Pockets owner: Timothy Doan, confirmed by the league owner November 14, 2026; this corrects the older workbook identity."
+        "Yahoo: recovered season totals and postseason games; full regular-season matchup schedules are unavailable. — means unavailable rank.",
+        "Alabama Hot Pockets belongs to Timothy Doan, confirmed November 14, 2026; source-workbook identity corrected in website export only."
       ],
       "teams": [
         {
@@ -2719,7 +2719,7 @@
         "Stephen Krehn"
       ],
       "notes": [
-        "Yahoo: season totals and final placements recovered; full weekly regular-season schedules are unavailable. Unavailable regular-season ranks are shown as —."
+        "Yahoo: recovered season totals and postseason games; full regular-season matchup schedules are unavailable. — means unavailable rank."
       ],
       "teams": [
         {
@@ -2901,7 +2901,7 @@
         "Ryan Nelson"
       ],
       "notes": [
-        "Yahoo: season totals and final placements recovered; full weekly regular-season schedules are unavailable. Unavailable regular-season ranks are shown as —."
+        "Yahoo: recovered season totals and postseason games; full regular-season matchup schedules are unavailable. — means unavailable rank."
       ],
       "teams": [
         {
@@ -3022,12 +3022,12 @@
   "identityCorrections": [
     {
       "season": 2012,
-      "team": "Alabama Hot Pockets",
       "previousManagerId": "MGR-025",
       "managerId": "MGR-019",
       "manager": "Timothy Doan",
+      "team": "Alabama Hot Pockets",
       "confirmedOn": "2026-11-14",
-      "source": "User confirmation in this chat; source workbook unchanged."
+      "source": "User confirmation; export-only correction, original workbook unchanged."
     }
   ]
 }
