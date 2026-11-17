@@ -57,7 +57,7 @@ async function loadManagers() {
       const option=document.createElement('option'); option.value=profile.id; option.textContent=profile.name;
       options.appendChild(option);
     }
-    select.replaceChildren(options); select.value=profiles[0].id;
+    select.replaceChildren(options); const requestedManager=new URLSearchParams(window.location.search).get('manager');select.value=profiles.some(p=>p.id===requestedManager)?requestedManager:profiles[0].id;
     const points=new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
     const percent=new Intl.NumberFormat('en-US',{style:'percent',maximumFractionDigits:1});
     function renderProfile() {

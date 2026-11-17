@@ -5,7 +5,7 @@
   "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
   "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
   "sourceUpdatedAt": "2026-11-17 06:21 CST",
-  "editorialStatus": "Draft recap archive for review; no automatic publication.",
+  "editorialStatus": "Published weekly recap archive; saved workbook results.",
   "managers": [
     {
       "id": "MGR-005",
@@ -1979,10 +1979,8 @@
         }
       ],
       "artwork": "recap-week-07-2026.png",
-      "artworkAlt": "Original illustrated Week 7 2026 league recap; contains numerical errors detailed in the adjacent correction notes.",
-      "artworkNotes": [
-        "Original artwork correction: Ely Ibrahim’s PA through Week 7 is 763.46, not 743.46. Use the written scoreboard and standings for verified figures."
-      ]
+      "artworkAlt": "Corrected Week 7 2026 illustrated league recap with verified standings and score-based weekly awards.",
+      "artworkNotes": []
     },
     {
       "season": 2026,
@@ -2250,11 +2248,8 @@
         }
       ],
       "artwork": "recap-week-08-2026.png",
-      "artworkAlt": "Original illustrated Week 8 2026 league recap; contains numerical errors detailed in the adjacent correction notes.",
-      "artworkNotes": [
-        "Original artwork contains incorrect standings totals and movement arrows. The verified standings for this week are shown in the written edition.",
-        "Award corrections: Aniwar Ibrahim won the closest game, 120.86–120.50 (0.36). Andrew Swanson had the lowest winning score, 75.58. The “best manager” and “worst manager” awards are editorial labels, not verified performance metrics."
-      ]
+      "artworkAlt": "Corrected Week 8 2026 illustrated league recap with verified standings and score-based weekly awards.",
+      "artworkNotes": []
     },
     {
       "season": 2026,

@@ -36,10 +36,12 @@ async function loadH2H() {
       for(const m of data.managers){const o=document.createElement('option');o.value=m.id;o.textContent=m.name;options.appendChild(o)}
       get(id).replaceChildren(options);
     }
-    get('manager-a').value='MGR-001';get('manager-b').value='MGR-002';
+    const requested=new URLSearchParams(window.location.search),a=requested.get('a'),b=requested.get('b');
+    get('manager-a').value=names.has(a)&&names.has(b)&&a!==b?a:'MGR-001';get('manager-b').value=names.has(a)&&names.has(b)&&a!==b?b:'MGR-002';
     for(const year of [...new Set(data.games.map(g=>g.season))].sort((a,b)=>b-a)){
       const option=document.createElement('option');option.value=String(year);option.textContent=String(year);get('season').appendChild(option);
     }
+    if(data.games.some(g=>String(g.season)===requested.get('year')))get('season').value=requested.get('year');
     const number=new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
     function render(){
       const a=get('manager-a').value,b=get('manager-b').value;
@@ -103,7 +105,7 @@ async function loadH2H() {
     for(const id of ['competition','season'])get(id).addEventListener('change',()=>{render();renderMatrix()});
     get('matrix-scope').addEventListener('change',renderMatrix);
     render();renderMatrix();get('h2h-content').hidden=false;
-    get('load-status').textContent=`Workbook snapshot updated ${data.sourceUpdatedAt}.`;
+    get('load-status').textContent=`Workbook snapshot updated ${data.sourceUpdatedAt}.`;get('coverage-note').textContent=data.coverage+' Missing games are not evidence that managers never met.';
   }catch(error){get('h2h-content').hidden=true;get('load-status').textContent='Head-to-Head could not be loaded. Please try again later.';console.error(error)}
 }
 loadH2H();

@@ -32,6 +32,7 @@ async function loadStandings() {
         const cell = document.createElement('td');
         // textContent displays names literally, including apostrophes and emoji.
         cell.textContent = value;
+        if(index===1){const link=document.createElement('a');link.href=`./managers.html?manager=${team.managerId}`;link.textContent=value;cell.textContent='';cell.appendChild(link);}
         if (index>=4) cell.className='number';
         row.appendChild(cell);
       });
@@ -58,6 +59,12 @@ async function loadStandings() {
     search.addEventListener('input', filterStandings);
     document.getElementById('search-controls').hidden = false;
     filterStandings();
+    // Optional standings movement; a missing archive cannot hide current standings.
+    fetch('./recaps.json').then(r=>r.ok?r.json():null).then(archive=>{
+      if(!archive||archive.sourceSha256!==data.sourceSha256)return;
+      const previous=archive.recaps.find(r=>r.season===data.season&&r.week===data.throughWeek-1);if(!previous)return;
+      teams.forEach((team,index)=>{const before=previous.standings.find(t=>t.managerId===team.managerId);if(!before)return;const delta=before.rank-team.rank;const cell=rows[index].children[0];cell.textContent=`${team.rank} ${delta>0?'↑ '+delta:delta<0?'↓ '+(-delta):'—'}`;});
+    }).catch(()=>{});
   } catch (error) {
     status.textContent = 'Standings could not be loaded. Please try again later.';
     console.error(error);

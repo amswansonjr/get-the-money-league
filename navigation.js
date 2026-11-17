@@ -8,7 +8,7 @@ const currentLeaguePage = leaguePagePath(window.location.pathname);
 const leagueDestinations = [
   ['./', 'Home'], ['./standings.html', 'Current Standings'],
   ['./history.html', 'Season History'], ['./managers.html', 'Manager Profiles'],
-  ['./h2h.html', 'Head-to-Head'], ['./recaps.html', 'Recap Archive']
+  ['./h2h.html', 'Head-to-Head'], ['./recaps.html', 'Weekly Recaps']
 ];
 for (const nav of document.querySelectorAll('.league-nav, nav[aria-label="League pages"]')) {
   nav.classList.add('league-nav');
