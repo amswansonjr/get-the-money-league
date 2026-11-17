@@ -38,9 +38,25 @@ async function loadRecaps() {
       get('week-announcement').textContent=`Showing ${r.season}, Week ${r.week}: ${r.headline}`;
       get('headline').textContent=r.headline;get('story').textContent=r.story;
       const dispatches=document.createDocumentFragment();
-      for(const dispatch of buildRecapBanter(r,names)){
+      const editorial=recapEditorials[`${r.season}-${r.week}`];
+      get('banter-heading').textContent=editorial?.title||'Some Disrespectful Dispatches';
+      get('banter-description').textContent=editorial?.subtitle||'Twelve teams. Six receipts. Nobody gets a bye from the group chat. Score-based league banter for the selected week.';
+      const dispatchesForWeek=editorial?editorial.entries.map(entry=>{
+        const team=r.standings.find(t=>t.managerId===entry.managerId);
+        const game=r.games.find(g=>g.managerA===entry.managerId||g.managerB===entry.managerId);
+        const isA=game.managerA===entry.managerId,score=isA?game.scoreA:game.scoreB,opponentScore=isA?game.scoreB:game.scoreA;
+        const opponent=names.get(isA?game.managerB:game.managerA);
+        return {headline:`${String(entry.rank).padStart(2,'0')} · ${team.team} — ${names.get(entry.managerId)}`,tagline:entry.headline,body:entry.body,lines:[
+          `Record: ${team.wins}–${team.losses}${team.ties?`–${team.ties}`:''} · Streak: ${entry.streak}`,
+          `Week ${r.week}: ${number.format(score)}–${number.format(opponentScore)} vs. ${opponent}`,
+          `Season PF: ${number.format(team.pointsFor)} · PA: ${number.format(team.pointsAgainst)}`
+        ]};
+      }):buildRecapBanter(r,names);
+      for(const dispatch of dispatchesForWeek){
         const article=document.createElement('article'),heading=document.createElement('h3'),list=document.createElement('ul');
         heading.textContent=dispatch.headline;article.appendChild(heading);
+        if(dispatch.tagline){const tagline=document.createElement('p'),strong=document.createElement('strong');strong.textContent=dispatch.tagline;tagline.appendChild(strong);article.appendChild(tagline)}
+        if(dispatch.body){const paragraph=document.createElement('p');paragraph.textContent=dispatch.body;article.appendChild(paragraph)}
         for(const line of dispatch.lines){const item=document.createElement('li');item.textContent=line;list.appendChild(item)}
         article.appendChild(list);dispatches.appendChild(article);
       }
