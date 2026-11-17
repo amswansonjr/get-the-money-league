@@ -2527,7 +2527,7 @@
     {
       "season": 2026,
       "week": 10,
-      "headline": "Week 10: DJ Searcy leads the scoring",
+      "headline": "Receipts Department",
       "story": "DJ Searcy posted the week's high score of 160.82. The closest matchup finished with a 7.38-point margin; the biggest margin was 88.78.",
       "highScore": {
         "managerId": "MGR-011",
@@ -2789,8 +2789,8 @@
           "rank": 12
         }
       ],
-      "artwork": null,
-      "artworkAlt": null
+      "artwork": "recap-week-10-2026.png",
+      "artworkAlt": "Week 10 Receipts Department illustrated recap: league mascots in a sports auditing office, six verified matchups, DJ’s 160.82 high score, Mike’s 88.78-point biggest win, and Terrance’s 7.38-point closest win."
     }
   ]
 }
