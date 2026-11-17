@@ -89,7 +89,7 @@ async function loadRecaps() {
       const notes=document.createDocumentFragment();
       for(const note of r.artworkNotes??[]){const p=document.createElement('p');p.textContent=note;notes.appendChild(p)}
       get('art-corrections').replaceChildren(notes);get('art-corrections').hidden=!(r.artworkNotes?.length);
-      if(r.artwork){get('artwork').src=`./${r.artwork}`;get('artwork').alt=r.artworkAlt;get('art-link').href=`./${r.artwork}`;}
+      if(r.artwork){const artworkURL=`./${r.artwork}?v=${encodeURIComponent(r.artworkAlt)}`;get('artwork').src=artworkURL;get('artwork').alt=r.artworkAlt;get('art-link').href=artworkURL;}
     }
     get('artwork').addEventListener('error',()=>{get('art-figure').hidden=true;get('art-unavailable').hidden=false;get('art-unavailable').textContent='Artwork could not be loaded. The written recap and scoreboard remain available.'});
     yearSelect.addEventListener('change',()=>selectYear());select.addEventListener('change',render);selectYear(initial.week);

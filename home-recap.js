@@ -7,7 +7,7 @@ async function showLatestRecap(){
     root.querySelector('[data-headline]').textContent=latest.headline;
     root.querySelector('[data-story]').textContent=latest.story;
     root.querySelector('a').href=`./recaps.html?year=${latest.season}&week=${latest.week}`;
-    const image=root.querySelector('img');image.hidden=!latest.artwork;if(latest.artwork){image.src='./'+latest.artwork;image.alt=latest.artworkAlt;}
+    const image=root.querySelector('img');image.hidden=!latest.artwork;if(latest.artwork){image.src='./'+latest.artwork+'?v='+encodeURIComponent(latest.artworkAlt);image.alt=latest.artworkAlt;}
   }catch(error){/* The saved homepage edition remains readable. */}
 }
 showLatestRecap();
