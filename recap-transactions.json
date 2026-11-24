@@ -4,7 +4,7 @@
     "2026-1": {
       "start": "2026-09-08",
       "end": "2026-09-14",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1403130690333122560",
@@ -77,7 +77,7 @@
     "2026-2": {
       "start": "2026-09-15",
       "end": "2026-09-21",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1405571766918623232",
@@ -93,13 +93,13 @@
         {
           "id": "1405633559116443648",
           "timestamp": "2026-09-15 13:16:00",
-          "manager": "Henry Omehe",
+          "manager": "Terrance Green",
           "type": "Trade",
-          "added": "DeVonta Smith",
-          "dropped": "Terry McLaurin; Jordan Mason",
+          "added": "Terry McLaurin; Jordan Mason",
+          "dropped": "DeVonta Smith",
           "bid": null,
-          "otherManagers": "Terrance Green",
-          "assets": "Henry Omehe received DeVonta Smith; Terrance Green received Terry McLaurin; Jordan Mason"
+          "otherManagers": "Henry Omehe",
+          "assets": "Terrance Green received Terry McLaurin; Henry Omehe received DeVonta Smith; Terrance Green received Jordan Mason"
         },
         {
           "id": "1405656751637880832",
@@ -370,7 +370,7 @@
     "2026-3": {
       "start": "2026-09-22",
       "end": "2026-09-28",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1406474207423991808",
@@ -584,24 +584,24 @@
         {
           "id": "1409722994233765888",
           "timestamp": "2026-09-26 19:15:49",
-          "manager": "Andrew Swanson",
+          "manager": "Henry Omehe",
           "type": "Trade",
-          "added": "Rashee Rice; Jeremiyah Love",
-          "dropped": "Rome Odunze; Kyren Williams",
+          "added": "Rome Odunze; Kyren Williams",
+          "dropped": "Rashee Rice; Jeremiyah Love",
           "bid": null,
-          "otherManagers": "Henry Omehe",
-          "assets": "Andrew Swanson received Rashee Rice; Jeremiyah Love; Henry Omehe received Rome Odunze; Kyren Williams"
+          "otherManagers": "Andrew Swanson",
+          "assets": "Andrew Swanson received Rashee Rice; Henry Omehe received Rome Odunze; Andrew Swanson received Jeremiyah Love; Henry Omehe received Kyren Williams"
         },
         {
           "id": "1409723492890394624",
           "timestamp": "2026-09-26 19:15:53",
-          "manager": "Andrew Swanson",
+          "manager": "Ryan Nelson",
           "type": "Trade",
-          "added": "Mike Evans; Javonte Williams",
-          "dropped": "Makai Lemon; James Cook III",
+          "added": "Makai Lemon; James Cook III",
+          "dropped": "Mike Evans; Javonte Williams",
           "bid": null,
-          "otherManagers": "Ryan Nelson",
-          "assets": "Andrew Swanson received Mike Evans; Javonte Williams; Ryan Nelson received Makai Lemon; James Cook III"
+          "otherManagers": "Andrew Swanson",
+          "assets": "Ryan Nelson received Makai Lemon; Andrew Swanson received Mike Evans; Andrew Swanson received Javonte Williams; Ryan Nelson received James Cook III"
         },
         {
           "id": "1409979050608381952",
@@ -630,7 +630,7 @@
     "2026-4": {
       "start": "2026-09-29",
       "end": "2026-10-05",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1410616928552128512",
@@ -740,7 +740,7 @@
           "dropped": "Blake Corum; Matthew Golden",
           "bid": null,
           "otherManagers": "Rhea Nelson",
-          "assets": "Ryan Nelson received Wan'Dale Robinson; Chase Brown; Rhea Nelson received Blake Corum; Matthew Golden"
+          "assets": "Rhea Nelson received Blake Corum; Rhea Nelson received Matthew Golden; Ryan Nelson received Wan'Dale Robinson; Ryan Nelson received Chase Brown"
         },
         {
           "id": "1411082561202987008",
@@ -850,7 +850,7 @@
           "dropped": "Jadarian Price; Amon-Ra St. Brown",
           "bid": null,
           "otherManagers": "DJ Searcy",
-          "assets": "Mike Taylor received Ja'Marr Chase; DJ Searcy received Jadarian Price; Amon-Ra St. Brown"
+          "assets": "DJ Searcy received Jadarian Price; DJ Searcy received Amon-Ra St. Brown; Mike Taylor received Ja'Marr Chase"
         },
         {
           "id": "1411607634892607488",
@@ -872,7 +872,7 @@
           "dropped": "Rashee Rice; Aaron Jones Sr.",
           "bid": null,
           "otherManagers": "Rhea Nelson",
-          "assets": "Andrew Swanson received Davante Adams; Tony Pollard; Rhea Nelson received Rashee Rice; Aaron Jones Sr."
+          "assets": "Rhea Nelson received Rashee Rice; Andrew Swanson received Davante Adams; Rhea Nelson received Aaron Jones Sr.; Andrew Swanson received Tony Pollard"
         },
         {
           "id": "1411836009548685312",
@@ -956,7 +956,7 @@
     "2026-5": {
       "start": "2026-10-06",
       "end": "2026-10-12",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1413183900896800768",
@@ -1293,7 +1293,7 @@
     "2026-6": {
       "start": "2026-10-13",
       "end": "2026-10-19",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1415770437731807232",
@@ -1601,14 +1601,14 @@
           "dropped": "DK Metcalf",
           "bid": null,
           "otherManagers": "Craig Lyons",
-          "assets": "Bryan Norman received J.K. Dobbins; Craig Lyons received DK Metcalf"
+          "assets": "Craig Lyons received DK Metcalf; Bryan Norman received J.K. Dobbins"
         }
       ]
     },
     "2026-7": {
       "start": "2026-10-20",
       "end": "2026-10-26",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1418234458259095552",
@@ -1945,7 +1945,7 @@
     "2026-8": {
       "start": "2026-10-27",
       "end": "2026-11-02",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1420751704801947648",
@@ -2161,7 +2161,7 @@
     "2026-9": {
       "start": "2026-11-03",
       "end": "2026-11-09",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1423429941822849024",
@@ -2399,7 +2399,7 @@
     "2026-10": {
       "start": "2026-11-10",
       "end": "2026-11-16",
-      "collectedAt": "2026-11-17 06:48 CST",
+      "collectedAt": "2026-11-24 06:39 CST",
       "moves": [
         {
           "id": "1425839877630476288",
@@ -2600,6 +2600,327 @@
           "assets": ""
         }
       ]
+    },
+    "2026-11": {
+      "start": "2026-11-17",
+      "end": "2026-11-23",
+      "collectedAt": "2026-11-24 06:39 CST",
+      "moves": [
+        {
+          "id": "1428419351031083008",
+          "timestamp": "2026-11-17 08:03:41",
+          "manager": "Ryan Nelson",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Demarcus Robinson",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428424520787566593",
+          "timestamp": "2026-11-17 08:24:13",
+          "manager": "Aaron Blank",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Devin Singletary",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428659640203247616",
+          "timestamp": "2026-11-17 23:58:30",
+          "manager": "Aniwar Ibrahim",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Kaleb Johnson",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428659759074004992",
+          "timestamp": "2026-11-17 23:58:59",
+          "manager": "Aniwar Ibrahim",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Tutu Atwell",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1427867956045426688",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Bryan Norman",
+          "type": "Waiver",
+          "added": "Michael Mayer",
+          "dropped": "Kyle Pitts Sr.",
+          "bid": 0,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428380215070961664",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Andrew Swanson",
+          "type": "Waiver",
+          "added": "Elic Ayomanor",
+          "dropped": "Kimani Vidal",
+          "bid": 18,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428433357758283776",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Henry Omehe",
+          "type": "Waiver",
+          "added": "Emari Demercado",
+          "dropped": "Elijah Mitchell",
+          "bid": 0,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428433883120029696",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Henry Omehe",
+          "type": "Waiver",
+          "added": "Chris Godwin Jr.",
+          "dropped": "J.J. McCarthy",
+          "bid": 0,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428490368768315392",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Rhea Nelson",
+          "type": "Waiver",
+          "added": "Cam Ward",
+          "dropped": "Geno Smith",
+          "bid": 2,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428575206846255104",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Andrew Swanson",
+          "type": "Waiver",
+          "added": "Kansas City Chiefs",
+          "dropped": "Austin Ekeler",
+          "bid": 8,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428632138344828928",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Ely Ibrahim",
+          "type": "Waiver",
+          "added": "Xavier Hutchinson",
+          "dropped": "Romeo Doubs",
+          "bid": 0,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428660364974784512",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Aniwar Ibrahim",
+          "type": "Waiver",
+          "added": "Mark Andrews",
+          "dropped": "",
+          "bid": 2,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428660662074089472",
+          "timestamp": "2026-11-18 02:13:37",
+          "manager": "Aniwar Ibrahim",
+          "type": "Waiver",
+          "added": "Chimere Dike",
+          "dropped": "",
+          "bid": 2,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428695839756267520",
+          "timestamp": "2026-11-18 02:22:21",
+          "manager": "Rhea Nelson",
+          "type": "Free-agent pickup",
+          "added": "Detroit Lions",
+          "dropped": "Indianapolis Colts",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428696359615070208",
+          "timestamp": "2026-11-18 02:24:25",
+          "manager": "Rhea Nelson",
+          "type": "Free-agent pickup",
+          "added": "Pat Bryant",
+          "dropped": "Keenan Allen",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428717027937234944",
+          "timestamp": "2026-11-18 03:46:33",
+          "manager": "DJ Searcy",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Dallas Cowboys",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428758909723623427",
+          "timestamp": "2026-11-18 06:32:58",
+          "manager": "Bryan Norman",
+          "type": "Free-agent pickup",
+          "added": "Los Angeles Chargers",
+          "dropped": "Reggie Virgil",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428779352459345920",
+          "timestamp": "2026-11-18 07:54:12",
+          "manager": "Ryan Nelson",
+          "type": "Free-agent pickup",
+          "added": "Quentin Johnston",
+          "dropped": "",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428780572708192256",
+          "timestamp": "2026-11-18 07:59:03",
+          "manager": "Ryan Nelson",
+          "type": "Free-agent pickup",
+          "added": "Kalif Raymond",
+          "dropped": "",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428942323877687296",
+          "timestamp": "2026-11-18 18:41:47",
+          "manager": "Henry Omehe",
+          "type": "Free-agent pickup",
+          "added": "Carolina Panthers",
+          "dropped": "Dontayvion Wicks",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428978809524207616",
+          "timestamp": "2026-11-18 21:06:46",
+          "manager": "Ryan Nelson",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Wan'Dale Robinson",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1428716787922382848",
+          "timestamp": "2026-11-19 01:32:45",
+          "manager": "DJ Searcy",
+          "type": "Waiver",
+          "added": "Keenan Allen",
+          "dropped": "Brandin Cooks",
+          "bid": 4,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1429583546330152960",
+          "timestamp": "2026-11-20 13:09:47",
+          "manager": "Ryan Nelson",
+          "type": "Free-agent pickup",
+          "added": "Gunnar Helm",
+          "dropped": "Kalif Raymond",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1429906319724281856",
+          "timestamp": "2026-11-21 10:32:22",
+          "manager": "Bryan Norman",
+          "type": "Free-agent pickup",
+          "added": "Chig Okonkwo",
+          "dropped": "Michael Mayer",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1430258613825318912",
+          "timestamp": "2026-11-22 09:52:15",
+          "manager": "Aaron Blank",
+          "type": "Drop only",
+          "added": "",
+          "dropped": "Puka Nacua",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1430258801713377280",
+          "timestamp": "2026-11-22 09:53:00",
+          "manager": "Aaron Blank",
+          "type": "Free-agent pickup",
+          "added": "Roman Wilson",
+          "dropped": "",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1430271771889655808",
+          "timestamp": "2026-11-22 10:44:32",
+          "manager": "Ryan Nelson",
+          "type": "Free-agent pickup",
+          "added": "Dawson Knox",
+          "dropped": "Gunnar Helm",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        },
+        {
+          "id": "1430287178797178880",
+          "timestamp": "2026-11-22 11:45:46",
+          "manager": "Mike Taylor",
+          "type": "Free-agent pickup",
+          "added": "Mike Washington Jr.",
+          "dropped": "Audric Estime",
+          "bid": null,
+          "otherManagers": "",
+          "assets": ""
+        }
+      ]
+    },
+    "2026-12": {
+      "start": "2026-11-24",
+      "end": "2026-11-30",
+      "collectedAt": "2026-11-24 06:39 CST",
+      "moves": []
     }
   }
 }

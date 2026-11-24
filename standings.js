@@ -27,7 +27,7 @@ async function loadStandings() {
       row.dataset.manager = team.manager.toLowerCase();
       row.dataset.team = team.team.toLowerCase();
       const values = [team.rank, team.manager, team.team,
-        `${team.wins}–${team.losses}–${team.ties}`, points.format(team.pointsFor), points.format(team.pointsAgainst)];
+        `${team.wins}–${team.losses}–${team.ties}`, rankedPoints(teams,team,'pointsFor'), rankedPoints(teams,team,'pointsAgainst')];
       values.forEach((value,index) => {
         const cell = document.createElement('td');
         // textContent displays names literally, including apostrophes and emoji.
@@ -63,7 +63,7 @@ async function loadStandings() {
     fetch('./recaps.json').then(r=>r.ok?r.json():null).then(archive=>{
       if(!archive||archive.sourceSha256!==data.sourceSha256)return;
       const previous=archive.recaps.find(r=>r.season===data.season&&r.week===data.throughWeek-1);if(!previous)return;
-      teams.forEach((team,index)=>{const before=previous.standings.find(t=>t.managerId===team.managerId);if(!before)return;const delta=before.rank-team.rank;const cell=rows[index].children[0];cell.textContent=`${team.rank} ${delta>0?'↑ '+delta:delta<0?'↓ '+(-delta):'—'}`;});
+      teams.forEach((team,index)=>{const before=previous.standings.find(t=>t.managerId===team.managerId);if(!before)return;const delta=before.rank-team.rank;const cell=rows[index].children[0];cell.textContent=String(team.rank)+' ';cell.appendChild(movementBadge(delta));});
     }).catch(()=>{});
   } catch (error) {
     status.textContent = 'Standings could not be loaded. Please try again later.';

@@ -90,7 +90,7 @@ async function loadManagers() {
       const rows=document.createDocumentFragment();
       for (const season of profile.seasons) {
         const row=document.createElement('tr');
-        const values=[`${season.year}${season.status==='Complete'?'':' · In progress'}`,season.team,`${season.wins}–${season.losses}–${season.ties}`,season.regularRank??'—',season.finalRank??'Pending',points.format(season.pointsFor),points.format(season.pointsAgainst),season.postseasonBracket??'Pending'];
+        const values=[`${season.year}${season.status==='Complete'?'':' · In progress'}`,season.team,`${season.wins}–${season.losses}–${season.ties}`,season.regularRank??'—',season.finalRank??'Pending',rankedPoints(data.seasons.find(s=>s.year===season.year).teams,season,'pointsFor'),rankedPoints(data.seasons.find(s=>s.year===season.year).teams,season,'pointsAgainst'),season.postseasonBracket??'Pending'];
         values.forEach((value,index)=>{
           const cell=document.createElement('td'); cell.textContent=value;
           if (index===5 || index===6) cell.className='number'; row.appendChild(cell);

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "week": 12,
+  "status": "upcoming",
+  "completedThroughWeek": 11,
+  "collectedAt": "2026-11-24 06:39 CST",
+  "liveRefresh": false,
+  "matches": [
+    {
+      "matchupId": 1,
+      "teams": [
+        {
+          "managerId": "MGR-008",
+          "manager": "Mike Taylor",
+          "points": 0.0,
+          "record": "5–6",
+          "projectedPoints": 123.73
+        },
+        {
+          "managerId": "MGR-005",
+          "manager": "Aaron Blank",
+          "points": 0.0,
+          "record": "5–6",
+          "projectedPoints": 101.58
+        }
+      ]
+    },
+    {
+      "matchupId": 2,
+      "teams": [
+        {
+          "managerId": "MGR-003",
+          "manager": "Henry Omehe",
+          "points": 0.0,
+          "record": "3–8",
+          "projectedPoints": 89.16
+        },
+        {
+          "managerId": "MGR-004",
+          "manager": "Rhea Nelson",
+          "points": 0.0,
+          "record": "5–6",
+          "projectedPoints": 105.27
+        }
+      ]
+    },
+    {
+      "matchupId": 3,
+      "teams": [
+        {
+          "managerId": "MGR-009",
+          "manager": "Terrance Green",
+          "points": 0.0,
+          "record": "7–4",
+          "projectedPoints": 119.66
+        },
+        {
+          "managerId": "MGR-001",
+          "manager": "Andrew Swanson",
+          "points": 0.0,
+          "record": "7–4",
+          "projectedPoints": 103.93
+        }
+      ]
+    },
+    {
+      "matchupId": 4,
+      "teams": [
+        {
+          "managerId": "MGR-010",
+          "manager": "Bryan Norman",
+          "points": 0.0,
+          "record": "7–4",
+          "projectedPoints": 128.68
+        },
+        {
+          "managerId": "MGR-006",
+          "manager": "Aniwar Ibrahim",
+          "points": 0.0,
+          "record": "8–3",
+          "projectedPoints": 107.28
+        }
+      ]
+    },
+    {
+      "matchupId": 5,
+      "teams": [
+        {
+          "managerId": "MGR-012",
+          "manager": "Craig Lyons",
+          "points": 0.0,
+          "record": "2–9",
+          "projectedPoints": 98.63
+        },
+        {
+          "managerId": "MGR-007",
+          "manager": "Ely Ibrahim",
+          "points": 0.0,
+          "record": "2–9",
+          "projectedPoints": 95.68
+        }
+      ]
+    },
+    {
+      "matchupId": 6,
+      "teams": [
+        {
+          "managerId": "MGR-002",
+          "manager": "Ryan Nelson",
+          "points": 0.0,
+          "record": "10–1",
+          "projectedPoints": 115.96
+        },
+        {
+          "managerId": "MGR-011",
+          "manager": "DJ Searcy",
+          "points": 0.0,
+          "record": "5–6",
+          "projectedPoints": 93.99
+        }
+      ]
+    }
+  ]
+}

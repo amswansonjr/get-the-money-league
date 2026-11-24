@@ -1,9 +1,9 @@
 {
   "season": 2026,
-  "throughWeek": 10,
-  "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
-  "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
-  "sourceUpdatedAt": "2026-11-17 06:21 CST",
+  "throughWeek": 11,
+  "sourceWorkbook": "Review - Private Master.xlsx",
+  "sourceSha256": "bcd96317437bfaf44cb9b602e82f3136fecb928c6adbea4fe013a309ec68cbd5",
+  "sourceUpdatedAt": "2026-11-24 06:39 CST",
   "ranking": "Saved workbook regular-season ranks; season in progress.",
   "standings": [
     {
@@ -12,11 +12,11 @@
       "managerId": "MGR-002",
       "manager": "Ryan Nelson",
       "team": "400 DEGREEZ",
-      "wins": 9,
+      "wins": 10,
       "losses": 1,
       "ties": 0,
-      "pointsFor": 1272.1,
-      "pointsAgainst": 973.04
+      "pointsFor": 1385.5,
+      "pointsAgainst": 1070.8
     },
     {
       "rank": 2,
@@ -25,34 +25,34 @@
       "manager": "Aniwar Ibrahim",
       "team": "W's in spite of Marv",
       "wins": 8,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointsFor": 1158.58,
-      "pointsAgainst": 1013.82
+      "pointsFor": 1241.28,
+      "pointsAgainst": 1132.92
     },
     {
       "rank": 3,
-      "rosterId": 5,
-      "managerId": "MGR-009",
-      "manager": "Terrance Green",
-      "team": "GreenMamba",
-      "wins": 6,
-      "losses": 4,
-      "ties": 0,
-      "pointsFor": 1106.76,
-      "pointsAgainst": 1134.6
-    },
-    {
-      "rank": 4,
       "rosterId": 3,
       "managerId": "MGR-010",
       "manager": "Bryan Norman",
       "team": "The Struggle is Real",
-      "wins": 6,
+      "wins": 7,
       "losses": 4,
       "ties": 0,
-      "pointsFor": 1105.5,
-      "pointsAgainst": 1054.88
+      "pointsFor": 1225.66,
+      "pointsAgainst": 1144.56
+    },
+    {
+      "rank": 4,
+      "rosterId": 5,
+      "managerId": "MGR-009",
+      "manager": "Terrance Green",
+      "team": "GreenMamba",
+      "wins": 7,
+      "losses": 4,
+      "ties": 0,
+      "pointsFor": 1204.86,
+      "pointsAgainst": 1219.64
     },
     {
       "rank": 5,
@@ -60,11 +60,11 @@
       "managerId": "MGR-001",
       "manager": "Andrew Swanson",
       "team": "Son of a Swan",
-      "wins": 6,
+      "wins": 7,
       "losses": 4,
       "ties": 0,
-      "pointsFor": 1019.98,
-      "pointsAgainst": 958.52
+      "pointsFor": 1149.32,
+      "pointsAgainst": 1050.26
     },
     {
       "rank": 6,
@@ -73,34 +73,34 @@
       "manager": "Mike Taylor",
       "team": "The Trade Federation 🏆🏆",
       "wins": 5,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "pointsFor": 1235.88,
-      "pointsAgainst": 1072.68
+      "pointsFor": 1320.92,
+      "pointsAgainst": 1170.78
     },
     {
       "rank": 7,
+      "rosterId": 11,
+      "managerId": "MGR-004",
+      "manager": "Rhea Nelson",
+      "team": "Catalina Wine Mixer",
+      "wins": 5,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1201.8,
+      "pointsAgainst": 1351.84
+    },
+    {
+      "rank": 8,
       "rosterId": 7,
       "managerId": "MGR-005",
       "manager": "Aaron Blank",
       "team": "Pukakke",
       "wins": 5,
-      "losses": 5,
-      "ties": 0,
-      "pointsFor": 1091.22,
-      "pointsAgainst": 1142.6
-    },
-    {
-      "rank": 8,
-      "rosterId": 11,
-      "managerId": "MGR-004",
-      "manager": "Rhea Nelson",
-      "team": "Catalina Wine Mixer",
-      "wins": 4,
       "losses": 6,
       "ties": 0,
-      "pointsFor": 1103.48,
-      "pointsAgainst": 1259.78
+      "pointsFor": 1183.28,
+      "pointsAgainst": 1240.92
     },
     {
       "rank": 9,
@@ -108,11 +108,11 @@
       "managerId": "MGR-011",
       "manager": "DJ Searcy",
       "team": "Free R Kelly",
-      "wins": 4,
+      "wins": 5,
       "losses": 6,
       "ties": 0,
-      "pointsFor": 955.74,
-      "pointsAgainst": 1083.36
+      "pointsFor": 1074.84,
+      "pointsAgainst": 1166.06
     },
     {
       "rank": 10,
@@ -121,10 +121,10 @@
       "manager": "Henry Omehe",
       "team": "The Hurts Locker",
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "pointsFor": 971.92,
-      "pointsAgainst": 1076.92
+      "pointsFor": 1061.6,
+      "pointsAgainst": 1197.08
     },
     {
       "rank": 11,
@@ -133,10 +133,10 @@
       "manager": "Craig Lyons",
       "team": "Run CMC",
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "pointsFor": 1041.76,
-      "pointsAgainst": 1180.3
+      "pointsFor": 1139.52,
+      "pointsAgainst": 1293.7
     },
     {
       "rank": 12,
@@ -145,10 +145,10 @@
       "manager": "Ely Ibrahim",
       "team": "Bi-Polar Boyz",
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "pointsFor": 1018.48,
-      "pointsAgainst": 1130.9
+      "pointsFor": 1110.22,
+      "pointsAgainst": 1260.24
     }
   ]
 }

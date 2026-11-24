@@ -34,7 +34,7 @@
     .checkerboard button[aria-pressed="true"] { outline:3px solid #f5d77a; outline-offset:-3px; }
     .checkerboard button:hover { text-decoration:underline; }
   </style>
-  <script src="./h2h.js" defer></script>
+  <script src="./presentation.js" defer></script><script src="./h2h.js" defer></script>
 <link rel="stylesheet" href="./navigation.css">
 <script src="./navigation.js" defer></script>
 <link rel="stylesheet" href="./site.css">
@@ -56,10 +56,10 @@
   <p id="coverage-note" class="subtext">2010–2012: recovered postseason games only. Regular-season H2H begins in 2013. The current-season coverage is recorded in the saved snapshot. Missing games are not evidence that managers never met.</p>
   <div id="h2h-content" hidden>
     <div class="controls">
-      <label>First manager<select id="manager-a"></select></label>
-      <label>Second manager<select id="manager-b"></select></label>
-      <label>Competition<select id="competition"><option value="all">All games</option value="Regular season">Regular season</option><option value="Championship playoffs">Championship playoffs</option><option value="Loser’s bracket">Loser’s bracket</option><option value="championship">Championship final only</option><option value="sacko">Sacko matchup only</option></select></label>
-      <label>Season<select id="season"><option value="all">All seasons</option></select></label>
+      <label>First Manager<select id="manager-a"></select></label>
+      <label>Second Manager<select id="manager-b"></select></label>
+      <label>Competition<select id="competition"><option value="all">All Games</option>Regular Season</option><option value="Championship playoffs">Championship Playoffs</option><option value="Loser’s bracket">Loser’s Bracket</option><option value="championship">Championship Final Only</option><option value="sacko">Sacko Matchup Only</option></select></label>
+      <label>Season<select id="season"><option value="all">All Seasons</option></select></label>
     </div>
     <p id="summary" role="status" aria-live="polite"></p>
     <div id="results" hidden>
@@ -70,15 +70,15 @@
       </div>
       <p class="subtext">Recorded winners determine results. An awarded win at a tied score is labeled in the table. The 2022 shared title does not change its recorded matchup winner.</p>
       <div class="scroll" role="region" aria-label="Recorded matchup history" tabindex="0"><table>
-        <caption>Recorded matchups · Newest first</caption>
-        <thead><tr><th scope="col">Season</th><th scope="col">Week</th><th scope="col">Competition</th><th scope="col" id="score-a-heading">First manager</th><th scope="col" id="score-b-heading">Second manager</th><th scope="col">Result</th><th scope="col">Note</th></tr></thead>
+        <caption>Recorded Matchups · Newest First</caption>
+        <thead><tr><th scope="col">Season</th><th scope="col">Week</th><th scope="col">Competition</th><th scope="col" id="score-a-heading">First Manager</th><th scope="col" id="score-b-heading">Second Manager</th><th scope="col">Result</th><th scope="col">Note</th></tr></thead>
         <tbody id="matchup-body"></tbody>
       </table></div>
     </div>
     <section aria-labelledby="checkerboard-heading">
-      <h2 id="checkerboard-heading">League rivalry checkerboard</h2>
+      <h2 id="checkerboard-heading">League Rivalry Checkerboard</h2>
       <p class="subtext">Read across a row: each cell shows that manager’s W–L–T against the column opponent. Green = winning record; red = losing record; neutral = even. — = no recorded matchups. Click a cell to show the rivalry above.</p>
-      <label for="matrix-scope">Managers shown</label>
+      <label for="matrix-scope">Managers Shown</label>
       <select id="matrix-scope"><option value="current">Current-season managers</option><option value="all">All historical managers</option></select>
       <p id="matrix-summary" class="subtext" role="status"></p>
       <div class="scroll checkerboard" role="region" aria-label="Head-to-head checkerboard; scroll to see opponents" tabindex="0"><table>

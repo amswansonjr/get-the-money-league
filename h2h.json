@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "sourceWorkbook": "GET_THE_MONEY_LEAGUE_HEADQUARTERS_V7_MASTER.xlsx",
-  "sourceSha256": "200c5d66a20d95e1d4d53ce4607ad3a241edda4a64391e29fb7e9234050654a3",
-  "sourceUpdatedAt": "2026-11-17 06:21 CST",
+  "sourceWorkbook": "Review - Private Master.xlsx",
+  "sourceSha256": "bcd96317437bfaf44cb9b602e82f3136fecb928c6adbea4fe013a309ec68cbd5",
+  "sourceUpdatedAt": "2026-11-24 06:39 CST",
   "currentSeason": 2026,
   "currentManagerIds": [
     "MGR-001",
@@ -18458,6 +18458,90 @@
       "source": "Sleeper 2026 snapshot"
     },
     {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-005",
+      "managerB": "MGR-004",
+      "scoreA": 92.06,
+      "scoreB": 98.32,
+      "winner": "MGR-004",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-008",
+      "managerB": "MGR-009",
+      "scoreA": 85.04,
+      "scoreB": 98.1,
+      "winner": "MGR-009",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-010",
+      "managerB": "MGR-003",
+      "scoreA": 120.16,
+      "scoreB": 89.68,
+      "winner": "MGR-010",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-007",
+      "managerB": "MGR-001",
+      "scoreA": 91.74,
+      "scoreB": 129.34,
+      "winner": "MGR-001",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-006",
+      "managerB": "MGR-011",
+      "scoreA": 82.7,
+      "scoreB": 119.1,
+      "winner": "MGR-011",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "Regular season",
+      "managerA": "MGR-002",
+      "managerB": "MGR-012",
+      "scoreA": 113.4,
+      "scoreB": 97.76,
+      "winner": "MGR-002",
+      "awardedWinner": false,
+      "championshipFinal": false,
+      "sackoFinal": false,
+      "source": "Sleeper 2026 snapshot"
+    },
+    {
       "season": 2010,
       "week": 15,
       "phase": "Championship playoffs",
@@ -18819,5 +18903,5 @@
       "source": "User confirmation; export-only correction, original workbook unchanged."
     }
   ],
-  "coverage": "2010–2012: recovered postseason only; regular-season H2H begins in 2013. 2026 through Week 10."
+  "coverage": "2010–2012: recovered postseason only; regular-season H2H begins in 2013. 2026 through Week 11."
 }

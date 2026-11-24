@@ -16,10 +16,10 @@ editorial=jsdata('recap-editorials.js').get(key)
 awards=jsdata('recap-sleeper-awards.js').get(key,[])
 transactions=json.loads((ROOT/'recap-transactions.json').read_text())['editions'].get(key)
 html=f'<section id="saved-recap-fallback"><p class="eyebrow">{year} · Week {week} · Saved written edition</p><h2>{escape(recap["headline"])}</h2><p>{escape(recap["story"])}</p><p class="subtext">Workbook updated {escape(data["sourceUpdatedAt"])}. Interactive selectors become available when the page scripts load.</p>'
-if awards:html+='<h2>Weekly awards</h2>'+table(['Award','Manager','Points','Details'],[[a['title'],names[a['managerId']],f'{a["points"]:.2f}',a['description']] for a in awards])
-html+='<h2>The scoreboard</h2>'+table(['Manager','Score','Opponent','Score'],[[names[g['managerA']],f'{g["scoreA"]:.2f}',names[g['managerB']],f'{g["scoreB"]:.2f}'] for g in recap['games']])
-html+='<h2>Standings watch</h2>'+table(['Position','Manager','Record','Points For','Points Against'],[[t['rank'],t['manager'],f'{t["wins"]}–{t["losses"]}–{t["ties"]}',f'{t["pointsFor"]:.2f}',f'{t["pointsAgainst"]:.2f}'] for t in recap['standings']])
-if recap['artwork']:html+='<h2>Illustrated edition</h2><p class="subtext">Illustrated editions began with Week 7 of 2026.</p><figure><a href="./'+escape(art_url)+'"><img style="max-width:600px;width:100%;height:auto" src="./'+escape(art_url)+'" alt="'+escape(recap['artworkAlt'])+'" loading="lazy"></a></figure>'
+if awards:html+='<h2>Weekly Awards</h2>'+table(['Award','Manager','Points','Details'],[[a['title'],names[a['managerId']] if a.get('managerId') else ' / '.join(names[i] for i in a['ids']),f'{a["points"]:.2f}',a['description']] for a in awards])
+html+='<h2>The Scoreboard</h2>'+table(['Manager','Score','Opponent','Score'],[[names[g['managerA']],f'{g["scoreA"]:.2f}',names[g['managerB']],f'{g["scoreB"]:.2f}'] for g in recap['games']])
+html+='<h2>Standings Watch</h2>'+table(['Position','Manager','Record','Points For','Points Against'],[[t['rank'],t['manager'],f'{t["wins"]}–{t["losses"]}–{t["ties"]}',f'{t["pointsFor"]:,.2f} ({1+sum(o["pointsFor"]>t["pointsFor"] for o in recap["standings"])})',f'{t["pointsAgainst"]:,.2f} ({1+sum(o["pointsAgainst"]<t["pointsAgainst"] for o in recap["standings"])})'] for t in recap['standings']])
+if recap['artwork']:html+='<h2>Illustrated Edition</h2><p class="subtext">Illustrated Editions began with Week 7 of 2026.</p><figure><a href="./'+escape(art_url)+'"><img style="max-width:600px;width:100%;height:auto" src="./'+escape(art_url)+'" alt="'+escape(recap['artworkAlt'])+'" loading="lazy"></a></figure>'
 if editorial:
     html+='<h2>'+escape(editorial['title'])+'</h2><p class="subtext">'+escape(editorial['subtitle'])+'</p><div class="banter">'
     teams={t['managerId']:t for t in recap['standings']}

@@ -24,7 +24,7 @@
     footer,.subtext,#load-status,#season-notes { font-style:italic; }
     label,#season-summary { font-weight:700; }
   </style>
-  <script src="./history.js" defer></script>
+  <script src="./presentation.js" defer></script><script src="./history.js" defer></script>
 <link rel="stylesheet" href="./navigation.css">
 <script src="./navigation.js" defer></script>
 <link rel="stylesheet" href="./site.css">
@@ -44,18 +44,18 @@
   <p class="subtext">Explore 2010–2026. Records and points are regular-season totals; final placement includes the postseason.</p>
   <p id="load-status" role="status">Loading saved season history…</p>
   <div id="history-content" hidden>
-    <label for="season-select">Choose a season</label>
+    <label for="season-select">Choose a Season</label>
     <select id="season-select" aria-controls="history-body" aria-describedby="season-summary"></select>
     <div role="status" aria-live="polite"><p id="season-summary"></p><p id="champions"></p><div id="season-notes"></div></div>
     <div class="scroll" role="region" aria-label="Season results" tabindex="0">
       <table>
         <caption id="history-caption"></caption>
-        <thead><tr><th scope="col">Final placement</th><th scope="col">Regular-season rank</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Regular-season record</th><th scope="col" class="number">Regular-season Points For</th><th scope="col" class="number">Regular-season Points Against</th></tr></thead>
+        <thead><tr><th scope="col">Final Placement</th><th scope="col">Regular-Season Rank</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Regular-Season Record</th><th scope="col" class="number">Regular-Season Points For (Rank)</th><th scope="col" class="number">Regular-Season Points Against (Rank)</th></tr></thead>
         <tbody id="history-body"></tbody>
       </table>
     </div>
   </div>
   <noscript><p>Enable JavaScript to choose a season, or <a href="./history.json">open the saved data</a>.</p></noscript>
-  <footer>Saved workbook snapshot, with no live refresh. PF = points for; PA = points against. — means unavailable; Pending means the season is unfinished. Scoring rules changed across seasons, so raw point totals are not directly comparable.</footer>
+  <p class="subtext">Parentheses show the category rank among all teams within that season: Points For ranks highest first; Points Against ranks lowest first. Ties share a rank.</p><footer>Saved workbook snapshot, with no live refresh. PF = points for; PA = points against. — means unavailable; Pending means the season is unfinished. Scoring rules changed across seasons, so raw point totals are not directly comparable.</footer>
 </main></body>
 </html>

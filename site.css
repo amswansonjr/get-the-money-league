@@ -168,3 +168,14 @@ tbody tr:nth-child(even) { background: var(--league-surface); }
   .league-nav a, .league-nav a:visited { padding: 8px 10px; }
   .controls, .archive-controls { gap: 12px; }
 }
+
+
+.partial-week { margin:24px 0; padding:20px; background:var(--league-surface); border:2px solid var(--league-accent); border-radius:var(--league-radius); }
+.partial-week table { white-space:normal; }
+.partial-week h2 { margin-top:8px; }
+
+.movement-flat { color: #ffffff; }
+.movement-up { color: #8be35e; }
+.movement-down { color: #ff7575; }
+
+.review-banner { padding:12px 20px; background:#f5d77a; color:#101820; font-weight:750; text-align:center; } .review-banner a { color:#101820; }

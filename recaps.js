@@ -31,7 +31,7 @@ async function loadRecaps() {
     const number=new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
     function tableRows(id,records){
       const fragment=document.createDocumentFragment();
-      for(const record of records){const row=document.createElement('tr');for(const entry of record){const cell=document.createElement('td');if(entry.href){const a=document.createElement('a');a.href=entry.href;a.textContent=entry.text;cell.appendChild(a)}else cell.textContent=entry.text;cell.className=entry.winner?'winner number':'number';if(String(entry.text).startsWith('↑'))cell.className+=' movement-up';if(String(entry.text).startsWith('↓'))cell.className+=' movement-down';row.appendChild(cell)}fragment.appendChild(row)}
+      for(const record of records){const row=document.createElement('tr');for(const entry of record){const cell=document.createElement('td');if(entry.href){const a=document.createElement('a');a.href=entry.href;a.textContent=entry.text;cell.appendChild(a)}else cell.textContent=entry.text;cell.className=entry.winner?'winner number':'number';if(entry.text==='—')cell.className+=' movement-flat';if(String(entry.text).startsWith('↑'))cell.className+=' movement-up';if(String(entry.text).startsWith('↓'))cell.className+=' movement-down';row.appendChild(cell)}fragment.appendChild(row)}
       get(id).replaceChildren(fragment);
     }
     function render(){
@@ -45,9 +45,9 @@ async function loadRecaps() {
       get('headline').textContent=r.headline;get('story').textContent=r.story;
       const dispatches=document.createDocumentFragment();
       const editorial=recapEditorials[`${r.season}-${r.week}`];
-      const priorEditorial=recapEditorials[`${r.season}-${r.week-1}`];
+      const priorEditorial=editorial?.ordering==='standings'?null:recapEditorials[`${r.season}-${r.week-1}`];
       get('banter-heading').textContent=editorial?.title||'Some Disrespectful Dispatches';
-      get('banter-description').textContent=editorial?(editorial.subtitle+(!priorEditorial?' This is the first archived ranked edition; editorial movement begins once a previous edition exists.':'')):'Twelve teams. Six receipts. Nobody gets a bye from the group chat. Score-based league banter for the selected week.';
+      get('banter-description').textContent=editorial?(editorial.subtitle+(!priorEditorial&&editorial.ordering!=='standings'?' This is the first archived ranked edition; editorial movement begins once a previous edition exists.':'')):'Twelve teams. Six receipts. Nobody gets a bye from the group chat. Score-based league banter for the selected week.';
       const dispatchesForWeek=editorial?editorial.entries.map(entry=>{
         const team=r.standings.find(t=>t.managerId===entry.managerId);
         const game=r.games.find(g=>g.managerA===entry.managerId||g.managerB===entry.managerId);
@@ -56,7 +56,7 @@ async function loadRecaps() {
         return {headline:`${String(entry.rank).padStart(2,'0')} · ${team.team} — ${names.get(entry.managerId)}`,tagline:entry.headline,body:entry.body,lines:[
           `Record: ${team.wins}–${team.losses}${team.ties?`–${team.ties}`:''} · Streak: ${entry.streak}`,
           `Week ${r.week}: ${number.format(score)}–${number.format(opponentScore)} vs. ${opponent}`,
-          `Season Points For: ${number.format(team.pointsFor)} · Points Against: ${number.format(team.pointsAgainst)}`,
+          `Season Points For: ${rankedPoints(r.standings,team,'pointsFor')} · Points Against: ${rankedPoints(r.standings,team,'pointsAgainst')}`,
           ...(priorEditorial?[`Power-ranking movement: ${rankMovement(entry,priorEditorial.entries.find(t=>t.managerId===entry.managerId))}`]:[])
         ]};
       }):buildRecapBanter(r,names);
@@ -73,16 +73,16 @@ async function loadRecaps() {
       const calculated=recapAwards(r).filter(a=>['Highest Scorer 😎','Lowest Scorer 💩'].includes(a.title));
       const marginAward=(title,g)=>({title,points:Math.abs(g.scoreA-g.scoreB),ids:[g.winner],description:'Point winning margin from the saved scoreboard.'});
       const awards=reported||[...calculated,marginAward('Biggest Blowout 😂',r.biggestWin),marginAward('Narrow Victory 😱',r.closest)];
-      get('awards-source').textContent=reported?'Sleeper weekly-report awards from the supplied report. Team and player scores checked against the saved lineups. Blowout and victory percentages use the losing team’s score.':'These four awards are calculated from the saved scoreboard. Manager-efficiency, projection, and position awards are not attached to this archived week.';
+      get('awards-source').textContent=reported?.some(a=>a.source==='supplied_sleeper_report')?'Sleeper weekly-report awards from the supplied report. Team and player scores checked against the saved lineups. Blowout and victory percentages use the losing team’s score.':'Awards are calculated from saved scores, legal lineup combinations, recorded starters and bench players. Projection awards use saved weekly projections and league scoring rules; unavailable categories are omitted.';
       const groups={team:document.createDocumentFragment(),starter:document.createDocumentFragment(),bench:document.createDocumentFragment()};
       for(const award of awards){const card=document.createElement('div'),heading=document.createElement('h3'),manager=document.createElement('p'),points=document.createElement('p'),detail=document.createElement('p');card.className='card';heading.textContent=award.title;manager.textContent=award.managerId?names.get(award.managerId):award.ids.map(id=>names.get(id)).join(' / ');points.className='value';points.textContent=number.format(award.points);detail.textContent=award.description||'';card.appendChild(heading);card.appendChild(manager);card.appendChild(points);card.appendChild(detail);groups[award.group||'team'].appendChild(card)}
-      get('weekly-awards').replaceChildren(groups.team);get('position-awards').replaceChildren(groups.starter);get('bench-awards').replaceChildren(groups.bench);get('position-awards-group').hidden=!reported;
+      get('weekly-awards').replaceChildren(groups.team);get('position-awards').replaceChildren(groups.starter);get('bench-awards').replaceChildren(groups.bench);get('position-awards-group').hidden=!awards.some(a=>a.group==='starter'||a.group==='bench');get('bench-awards-heading').hidden=!awards.some(a=>a.group==='bench');
       get('score-caption').textContent=`${r.season} · Week ${r.week} · ${r.games.length} completed matchups`;
       tableRows('scores',r.games.map(g=>[{text:names.get(g.managerA),href:`./managers.html?manager=${g.managerA}`,winner:g.winner===g.managerA},{text:number.format(g.scoreA),winner:g.winner===g.managerA},{text:names.get(g.managerB),href:`./managers.html?manager=${g.managerB}`,winner:g.winner===g.managerB},{text:number.format(g.scoreB),winner:g.winner===g.managerB},{text:'H2H',href:`./h2h.html?a=${g.managerA}&b=${g.managerB}&year=${r.season}`} ]));
       get('week-totals').textContent=`League total: ${number.format(r.leagueTotal)} points · Median team score: ${number.format(r.median)}.`;
       get('standings-caption').textContent=`Regular-season records through Week ${r.week}`;
       const previous=recaps.find(p=>p.season===r.season&&p.week===r.week-1),priorTeams=previous?recapOrder(previous.standings):[];
-      tableRows('recap-standings',recapOrder(r.standings).map(t=>[{text:t.rank},{text:rankMovement(t,priorTeams.find(p=>p.managerId===t.managerId))},{text:t.manager,href:`./managers.html?manager=${t.managerId}`},{text:`${t.wins}–${t.losses}–${t.ties}`},{text:number.format(t.pointsFor)},{text:number.format(t.pointsAgainst)}]));
+      tableRows('recap-standings',recapOrder(r.standings).map(t=>[{text:t.rank},{text:rankMovement(t,priorTeams.find(p=>p.managerId===t.managerId))},{text:t.manager,href:`./managers.html?manager=${t.managerId}`},{text:`${t.wins}–${t.losses}–${t.ties}`},{text:rankedPoints(r.standings,t,'pointsFor')},{text:rankedPoints(r.standings,t,'pointsAgainst')}]));
       renderTransactionLedger(get('transaction-ledger'),transactions[`${r.season}-${r.week}`]);
       get('art-figure').hidden=!r.artwork;get('art-unavailable').hidden=Boolean(r.artwork);
       get('art-unavailable').textContent=r.season===2026&&r.week<7?'Illustrated editions began with Week 7 of 2026. Written results are available for this week.':'No illustrated cover is attached to this archived week. Written results are available.';

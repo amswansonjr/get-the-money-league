@@ -65,7 +65,7 @@ async function loadHistory() {
       for (const team of teams) {
         const row = document.createElement('tr');
         const values = [team.finalRank ?? (completed ? '—' : 'Pending'),team.regularRank ?? '—',team.manager,team.team,
-          `${team.wins}–${team.losses}–${team.ties}`,points.format(team.pointsFor),points.format(team.pointsAgainst)];
+          `${team.wins}–${team.losses}–${team.ties}`,rankedPoints(teams,team,'pointsFor'),rankedPoints(teams,team,'pointsAgainst')];
         values.forEach((value,index) => {
           const cell = document.createElement('td'); cell.textContent = value;
           if (index >= 5) cell.className = 'number';

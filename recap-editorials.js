@@ -1,4 +1,3 @@
-// Archived written editions are separate from the workbook data export.
 const recapEditorials = {
   "2026-10": {
     "title": "Disrespectful Power Rankings",
@@ -89,5 +88,96 @@ const recapEditorials = {
         "streak": "L6"
       }
     ]
+  },
+  "2026-11": {
+    "title": "Tuesday Morning Roast",
+    "subtitle": "Week 11 · Fresh scores. Burnt excuses. Teams listed in official standings order; the commentary is strictly unofficial.",
+    "entries": [
+      {
+        "managerId": "MGR-002",
+        "headline": "TEN WINS. ZERO HUMILITY.",
+        "body": "Ryan beat Craig 113.40–97.76 and moved to 10–1, which is unfortunate news for anyone hoping he would become easier to be around. He leads the league in season points, too, so we cannot even dismiss this as a scheduling accident. The crawfish boil is still running, the crown still fits, and the rest of us are stuck hoping somebody eventually turns off the gas.",
+        "rank": 1,
+        "streak": "W6"
+      },
+      {
+        "managerId": "MGR-006",
+        "headline": "PERFECT EXECUTION. TERRIBLE INGREDIENTS.",
+        "body": "Aniwar won Best Manager and Lowest Scorer in the same week. Every lineup decision was correct. Every available improvement was exhausted. The final product was 82.70 points and a 36.40-point loss to DJ. That is a chef earning a Michelin star for preparing the finest gas-station sandwich in the county. At 8–3, the bear still has a strong record. This week, though, he was absolutely a teddy.",
+        "rank": 2,
+        "streak": "L1"
+      },
+      {
+        "managerId": "MGR-010",
+        "headline": "THE STRUGGLE HAS BECOME SOMEONE ELSE’S PROBLEM.",
+        "body": "Bryan put up 120.16, the second-highest score of the week, and beat Henry by 30.48. Jonah Coleman supplied 32.90 and took RB of the Week, doing his part to make the team name increasingly misleading. Bryan is now 7–4 and third in the standings. Keep calling it a struggle if you want, but lately the only people needing emotional support are on the other side of the matchup.",
+        "rank": 3,
+        "streak": "W2"
+      },
+      {
+        "managerId": "MGR-009",
+        "headline": "WON THE GAME. LOST THE LINEUP ARGUMENT.",
+        "body": "Terrance beat Mike 98.10–85.04, then somehow walked into the group chat with the worst lineup efficiency in the league. His roster could have produced 145.86. He used 67.26% of it. Travis Kelce’s 22.40 sat on the bench while the snake left 47.76 total points unused. A win is a win, but this one came with the unmistakable sound of somebody dragging a pull door open.",
+        "rank": 4,
+        "streak": "W3"
+      },
+      {
+        "managerId": "MGR-001",
+        "headline": "THE BIRD HAS FOUND THE VOLUME BUTTON.",
+        "body": "Swanson scored 129.34, beat Ely by 37.60, and collected both Highest Scorer and Biggest Blowout. After last week’s 88-point faceplant, the swan has returned with sunglasses and an unbearable amount of confidence. Before the victory speech gets too long: Ladd McConkey’s 18.20 was still on the bench, and the optimal lineup was 144.96. Great week. Still found a way to leave something to complain about.",
+        "rank": 5,
+        "streak": "W1"
+      },
+      {
+        "managerId": "MGR-008",
+        "headline": "THE TRADE FEDERATION HAS MISPLACED ITS OFFENSE.",
+        "body": "Mike followed last week’s 160.38 with 85.04. Projected for 113.88, he finished 25.32% below expectations and handed Terrance a win despite the snake’s generous donation of unused points. The black-and-gold armor remains immaculate. The production department appears to have called in sick. At 5–6, the two trophies in the team name are being asked to provide increasingly detailed references.",
+        "rank": 6,
+        "streak": "L1"
+      },
+      {
+        "managerId": "MGR-004",
+        "headline": "A WIN WITH A CAUTIOUS POUR.",
+        "body": "Rhea beat Blank 98.32–92.06 and claimed the week’s narrowest victory at 6.26 points. No scoring explosion, no dramatic demolition, just enough wine left in the bottle to make somebody else miserable. She moves to 5–6 while still carrying the league’s highest season points-against total. For once, the opponent stopped pouring before the glass overflowed. Take the win and let Blank explain the difference.",
+        "rank": 7,
+        "streak": "W1"
+      },
+      {
+        "managerId": "MGR-005",
+        "headline": "CLOSE ENOUGH TO REPLAY EVERY DECISION.",
+        "body": "Blank lost by 6.26, which is precisely the kind of margin that turns a normal Tuesday into a personal investigation. Chicago’s defense delivered 18.00 and DEF of the Week. Jacory Croskey-Merritt’s 14.70 led the benched running backs. His optimal lineup was 103.16, enough to beat Rhea’s actual score. The hairstyle can stay iconic. The lineup card could have used another look.",
+        "rank": 8,
+        "streak": "L2"
+      },
+      {
+        "managerId": "MGR-011",
+        "headline": "THE ENCORE WAS ACTUALLY GOOD.",
+        "body": "DJ followed his Week 10 eruption with 119.10 and another win, this time over Aniwar. Dak Prescott supplied 43.90 and QB of the Week. The whole lineup beat its 95.88 projection by 24.22%, earning Overachiever. The pink hat and mask are staying, and apparently so is the offense. At 5–6, DJ has given the rest of the league a deeply annoying reason to keep checking his score.",
+        "rank": 9,
+        "streak": "W2"
+      },
+      {
+        "managerId": "MGR-003",
+        "headline": "THE LOCKER ROOM SPEECH IS GETTING LONGER.",
+        "body": "Henry scored 89.68 and lost to Bryan by 30.48. George Kittle’s 16.90 earned TE of the Week, but one excellent tight end does not constitute a rescue operation. At 3–8, The Hurts Locker is continuing to deliver on the emotional part of the name. Somewhere, a distraught Eagles fan is preparing a passionate explanation. Unfortunately, the standings do not award points for volume or references to Jalen Hurts.",
+        "rank": 10,
+        "streak": "L5"
+      },
+      {
+        "managerId": "MGR-012",
+        "headline": "RUN CMC. SAME DESTINATION.",
+        "body": "Craig scored 97.76 and lost to Ryan by 15.64. C.J. Stroud’s 25.46 and Philadelphia’s 6.00 led their respective bench categories, so at least the sideline had something to celebrate. Even Craig’s optimal 108.56 would not have beaten Ryan’s 113.40. At 2–9, this particular loss cannot be fixed by one furious lineup swap. The red and gold look sharp. The route back to respectability remains under construction.",
+        "rank": 11,
+        "streak": "L2"
+      },
+      {
+        "managerId": "MGR-007",
+        "headline": "PURPLE RAIN. SAME LEAKY ROOF.",
+        "body": "Ely scored 91.74 and took the week’s biggest loss, falling 37.60 short of Swanson. The NEW Purple Reign has the royal branding and the dramatic lighting; the results remain stubbornly uncooperative. He joins Craig at 2–9. This was not a case of the winning lineup hiding on the bench, either: the optimal total was 96.44. The throne needs more than a fresh coat of purple paint.",
+        "rank": 12,
+        "streak": "L7"
+      }
+    ],
+    "ordering": "standings"
   }
 };

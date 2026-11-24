@@ -48,12 +48,12 @@ label {
   font-weight: 700;
 }
   </style>
-  <script src="./standings.js" defer></script>
+  <script src="./presentation.js" defer></script><script src="./standings.js" defer></script>
 <link rel="stylesheet" href="./navigation.css">
 <script src="./navigation.js" defer></script>
 <link rel="stylesheet" href="./site.css">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-</head>
+<script src="./in-progress.js" defer></script></head>
 <body><main>
   <body><main>
   <nav class="league-nav" aria-label="League pages">
@@ -65,10 +65,10 @@ label {
   <a href="./recaps.html">Weekly Recaps</a>
 </nav>
   <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
-  <h1>2026 Standings</h1>
+  <h1>2026 Standings</h1><div id="current-week-snapshot"></div>
   <p id="status" role="status">Loading saved standings…</p>
   <div id="search-controls" hidden>
-  <label for="manager-search">Search managers or teams</label>
+  <label for="manager-search">Search Managers or Teams</label>
   <input
     id="manager-search"
     type="search"
@@ -80,12 +80,12 @@ label {
 </div>
   <div class="scroll" role="region" aria-label="Standings table" tabindex="0" hidden id="table-region">
     <table>
-      <caption>Regular season · Season in progress</caption>
-      <thead><tr><th scope="col">Rank / weekly change</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Record</th><th scope="col" class="number">Points For</th><th scope="col" class="number">Points Against</th></tr></thead>
+      <caption>Regular Season · Season in Progress</caption>
+      <thead><tr><th scope="col">Rank / Weekly Change</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Record</th><th scope="col" class="number">Points For (Rank)</th><th scope="col" class="number">Points Against (Rank)</th></tr></thead>
       <tbody id="standings-body"></tbody>
     </table>
   </div>
   <noscript><p>Enable JavaScript to display standings, or <a href="./standings-2026.json">open the saved data</a>.</p></noscript>
-  <footer>Saved workbook snapshot. No live refresh or connection to Excel. PF = points for; PA = points against. Ranks follow the workbook. Arrows show standings movement since the previous week, not editorial power rankings.</footer>
+  <p class="subtext">Parentheses show the category rank within the selected season: Points For ranks highest first; Points Against ranks lowest first. Ties share a rank. These display ranks do not change standings tiebreakers.</p><footer>Saved workbook snapshot. No live refresh or connection to Excel. PF = points for; PA = points against. Ranks follow the workbook. Arrows show standings movement since the previous week, not editorial power rankings.</footer>
 </main></body>
 </html>
