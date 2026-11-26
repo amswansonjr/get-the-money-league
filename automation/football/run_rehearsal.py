@@ -10,7 +10,7 @@ sys.path.insert(0,str(BUNDLE/'workbook'))
 from onedrive_files import GraphFiles,NoRedirect
 
 def request(url,method='GET',body=None,headers=None):
-    with urllib.request.build_opener(NoRedirect()).open(urllib.request.Request(url,data=body,headers=headers or {},method=method),timeout=60) as response:return response.read()
+    with urllib.request.build_opener(NoRedirect()).open(urllib.request.Request(url,data=body,headers={'User-Agent':'LeagueHeadquarters-Cloud-Rehearsal/1.0','Accept':'application/json',**(headers or {})},method=method),timeout=60) as response:return response.read()
 def token():
     url=os.environ['ACTIONS_ID_TOKEN_REQUEST_URL']
     if not url.startswith('https://') or not urllib.parse.urlsplit(url).hostname.endswith('.actions.githubusercontent.com'):raise ValueError('OIDC_HOST_REJECTED')
