@@ -1,0 +1,27 @@
+name: Prepare Football Review
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: Private admin rehearsal job ID
+        required: true
+        type: string
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: football-private-preparation
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.repository == 'amswansonjr/get-the-money-league' && github.ref == 'refs/heads/main' && github.actor_id == '212289627'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Prepare Private Review Copies
+        env:
+          GTM_JOB_ID: ${{ inputs.job_id }}
+        run: python3 automation/football/run_rehearsal.py
