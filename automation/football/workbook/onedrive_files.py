@@ -12,7 +12,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 def sha(data):return hashlib.sha256(data).hexdigest()
 def allowed_transfer_url(url):
     p=urllib.parse.urlsplit(url)
-    return p.scheme=='https' and not p.username and not p.password and p.port in (None,443) and any(p.hostname and (p.hostname==suffix or p.hostname.endswith('.'+suffix)) for suffix in ('1drv.com','onedrive.com','sharepoint.com','live.com'))
+    return p.scheme=='https' and not p.username and not p.password and p.port in (None,443) and any(p.hostname and (p.hostname==suffix or p.hostname.endswith('.'+suffix)) for suffix in ('1drv.com','onedrive.com','sharepoint.com','live.com','microsoftpersonalcontent.com'))
 
 class GraphFiles:
     def __init__(self,access_token,targets,opener=None):
