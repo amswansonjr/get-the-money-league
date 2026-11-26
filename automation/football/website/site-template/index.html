@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GET THE $$$$ | League Headquarters</title>
+  <style>
+    body {
+      margin: 0;
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: #19263b;
+      padding: 32px;
+      text-align: center;
+    }
+    h1 { margin-bottom: 8px; }
+    main {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 16px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #24334a;
+      padding: 24px;
+      border-radius: 12px;
+    }
+      a,
+a:visited {
+  color: #f5d77a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: #ffffff;
+}
+
+a:focus-visible {
+  outline: 2px solid #f5d77a;
+  outline-offset: 4px;
+}
+ .league-crest {
+  display: block;
+  width: min(260px, 70vw);
+  height: auto;
+  margin: 0 auto 20px;
+}
+  </style>
+  <link rel="stylesheet" href="./navigation.css">
+<script src="./presentation.js" defer></script><script src="./navigation.js" defer></script>
+<script src="./home-recap.js" defer></script>
+<link rel="stylesheet" href="./site.css">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <header>
+
+    <img
+  class="league-crest"
+  src="./league-crest.png"
+  alt="GET THE $$$$ — Some Disrespectful Bastards — Est. 2010"
+>
+    <h1>GET THE $$$$</h1>
+    <p>Fantasy League Headquarters | Est. 2010</p>
+  </header>
+
+  <main>
+    <nav class="league-nav" aria-label="League pages">
+  <a href="./">Home</a>
+  <a href="./standings.html">Current Standings</a>
+  <a href="./history.html">Season History</a>
+  <a href="./managers.html">Manager Profiles</a>
+  <a href="./h2h.html">Head-to-Head</a>
+  <a href="./recaps.html">Weekly Recaps</a>
+</nav>
+    <h2 style="text-align: center;">
+  The Official GET THE $$$$ League Headquarters
+</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>View Current Year Standings</h3>
+        <p><a href="./standings.html">2026 Standings</a></p>
+      </div>
+      <div class="card">
+        <h3>Season History</h3>
+        <p><a href="./history.html">Explore 2010–2026 Seasons</a></p>
+      </div>
+      <div class="card">
+        <h3>Manager Profiles</h3>
+        <p><a href="./managers.html">Explore Current and Former Managers</a></p>
+      </div>
+      <div class="card">
+        <h3>Head-to-Head Records</h3>
+        <p><a href="./h2h.html">Explore Manager Rivalries</a></p>
+      </div>
+      <div class="card"><h3>Weekly Recaps</h3><p><a href="./recaps.html">Explore weekly results and illustrated editions</a></p></div>
+    </div>
+    <!-- THIS-WEEK-START --><!-- THIS-WEEK-END -->
+  </main>
+</body>
+</html>

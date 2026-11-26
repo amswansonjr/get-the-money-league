@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 Standings | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.6 system-ui,sans-serif; }
+    main { max-width:1100px; margin:auto; padding:32px 20px; }
+    a { color:#efcc71; } h1 { line-height:1.2; }
+    .eyebrow { color:#efcc71; font-weight:700; letter-spacing:.08em; }
+    .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:16px; font-weight:600; }
+    th,td { padding:12px 16px; text-align:left; border-top:1px solid #38434d; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    footer { color:#c1cbd3; margin-top:24px; }
+    input[type="search"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #aab7c4;
+  border-radius: 6px;
+  background: #192530;
+  color: #ffffff;
+  font: inherit;
+}
+
+input[type="search"]::placeholder {
+  color: #c1cbd3;
+}
+
+input[type="search"]:focus-visible {
+  outline: 2px solid #f5d77a;
+  outline-offset: 3px;
+}
+    footer,
+#status,
+#search-results {
+  font-style: italic;
+}
+
+label {
+  font-weight: 700;
+}
+  </style>
+  <script src="./presentation.js" defer></script><script src="./standings.js" defer></script>
+<link rel="stylesheet" href="./navigation.css">
+<script src="./navigation.js" defer></script>
+<link rel="stylesheet" href="./site.css">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body><main>
+  <body><main>
+  <nav class="league-nav" aria-label="League pages">
+  <a href="./">Home</a>
+  <a href="./standings.html">Current Standings</a>
+  <a href="./history.html">Season History</a>
+  <a href="./managers.html">Manager Profiles</a>
+  <a href="./h2h.html">Head-to-Head</a>
+  <a href="./recaps.html">Weekly Recaps</a>
+</nav>
+  <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
+  <h1>2026 Standings</h1>
+  <p id="status" role="status">Loading saved standings…</p>
+  <div id="search-controls" hidden>
+  <label for="manager-search">Search Managers or Teams</label>
+  <input
+    id="manager-search"
+    type="search"
+    placeholder="Search by Manager or Team Name"
+    aria-controls="standings-body"
+    aria-describedby="search-results"
+  >
+  <p id="search-results" role="status" aria-live="polite"></p>
+</div>
+  <div class="scroll" role="region" aria-label="Standings table" tabindex="0" hidden id="table-region">
+    <table>
+      <caption>Regular Season · Season in Progress</caption>
+      <thead><tr><th scope="col">Rank / Weekly Change</th><th scope="col">Manager</th><th scope="col">Team</th><th scope="col">Record</th><th scope="col" class="number">Points For (Rank)</th><th scope="col" class="number">Points Against (Rank)</th></tr></thead>
+      <tbody id="standings-body"></tbody>
+    </table>
+  </div>
+  <noscript><p>Enable JavaScript to display standings, or <a href="./standings-2026.json">open the saved data</a>.</p></noscript>
+  <p class="subtext">Parentheses show the category rank within the selected season: Points For ranks highest first; Points Against ranks lowest first. Ties share a rank. These display ranks do not change standings tiebreakers.</p><footer>Saved workbook snapshot. No live refresh or connection to Excel. PF = points for; PA = points against. Ranks follow the workbook. Arrows show standings movement since the previous week, not editorial power rankings.</footer>
+</main></body>
+</html>

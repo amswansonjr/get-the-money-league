@@ -1,0 +1,20 @@
+{
+  "baseCommit": "5fdc5ea685dd5112ef054ff3ef55d2b6c5e02432",
+  "sourceHashes": {
+    "index.html": "2ffc0a3c8c3124cb28b1e9f8b86757cf35b55bc2a682cbb35be6d66b0e2127eb",
+    "standings.html": "8da1734956316d77511a836a46928bac7450bc874448a5a4918a0c2345d6b893",
+    "history.html": "e0ec3eab28d368121b9008951f8e72f3f26667ba76ce4fd0e591b855f9db3f6c",
+    "managers.html": "5ce4817f242c125a40bcd7e7cc41d899d51d85ec69e1e81248dcdabb50304a88",
+    "h2h.html": "5ec03637d95c35b720a6c673f824accf48dea7b07750e1e1a7f9447e16306652",
+    "recaps.html": "a6df66639ce243e190f0005e74bd90baed1396068da812743914211ec6677590",
+    "site.css": "ca304db8f657c9084be6d1047d6aec4df480bc23a6f6a33e1eed8961e5c30460",
+    "navigation.js": "198de10d8f52252172c687ed47aa84ce4abaacc32cfb46a5185290078e544ae9",
+    "standings.js": "cf1005225e3831650757c22e4184af86828c83b6097c1ca7269d4d8d62b151bc",
+    "history.js": "aff9aa914d110089618018aff50fa4d4659305a0f82ae9c759c6dc47c17746c6",
+    "managers.js": "efb9b978b8c154fff7c17f422512c8d1e414abeab62e915f4912ad22e6cd7b70",
+    "h2h.js": "6ee03e412786f4670def34aa7a793a4df72aca9b92683e5dfd0679d8ae3dec4e",
+    "recaps.js": "c39432bfbe925b722aaf9486a00979e8122a0e8e18f936320751fb2ef347bc60",
+    "recap-features.js": "d4d13970aed932b515ceb323960302dd260c5f877c7f5e74ce38748d7e547ceb",
+    "home-recap.js": "ab6ff50e91d41c30f98b4c728328f561bead18427f541de510fbf8a38d2d1ceb"
+  }
+}

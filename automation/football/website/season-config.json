@@ -1,0 +1,19 @@
+{
+  "season": 2026,
+  "leagueId": "1366250386662379520",
+  "teamCount": 12,
+  "regularSeasonWeeks": 14,
+  "editorialArchive": "editorial/recaps.json",
+  "identityCorrections": [
+    {
+      "season": 2012,
+      "previousManagerId": "MGR-025",
+      "managerId": "MGR-019",
+      "manager": "Timothy Doan",
+      "team": "Alabama Hot Pockets",
+      "confirmedOn": "2026-11-14",
+      "source": "User confirmation; export-only correction, original workbook unchanged."
+    }
+  ],
+  "seasonStartTuesday": "2026-09-08"
+}

@@ -1,0 +1,644 @@
+[
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A4",
+    "before": "DATA COVERAGE",
+    "after": "Data Coverage"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "B4",
+    "before": "STATUS",
+    "after": "Status"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "D4",
+    "before": "WORKBOOK TAB",
+    "after": "Workbook Tab"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "E4",
+    "before": "PURPOSE",
+    "after": "Purpose"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A6",
+    "before": "Completed seasons",
+    "after": "Completed Seasons"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A7",
+    "before": "2026 snapshot",
+    "after": "2026 Snapshot"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A8",
+    "before": "Season roster records",
+    "after": "Season Roster Records"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A9",
+    "before": "Team-game results",
+    "after": "Team-Game Results"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A10",
+    "before": "Completed games",
+    "after": "Completed Games"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A11",
+    "before": "Bracket entries",
+    "after": "Bracket Entries"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A13",
+    "before": "IMPORTANT RULE",
+    "after": "Important Rule"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "B13",
+    "before": "APPLICATION",
+    "after": "Application"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A23",
+    "before": "LEAGUE HISTORY & SCORING GUIDE",
+    "after": "League History & Scoring Guide"
+  },
+  {
+    "sheet": "HQ Dashboard",
+    "cell": "A35",
+    "before": "WEEKLY REFRESH",
+    "after": "Weekly Refresh"
+  },
+  {
+    "sheet": "Manager Directory",
+    "cell": "C1",
+    "before": "Sleeper User ID (text)",
+    "after": "Sleeper User ID (Text)"
+  },
+  {
+    "sheet": "Career Leaderboard",
+    "cell": "J1",
+    "before": "Titles incl. shared",
+    "after": "Titles Incl. Shared"
+  },
+  {
+    "sheet": "Career Leaderboard",
+    "cell": "W1",
+    "before": "Sacko Appearance % (covered seasons)",
+    "after": "Sacko Appearance % (Covered Seasons)"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A1",
+    "before": "2026 SEASON  |  CURRENT REGULAR-SEASON STANDINGS",
+    "after": "2026 Season  |  Current Regular-Season Standings"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A19",
+    "before": "2025 SEASON  |  FINAL PLACEMENT",
+    "after": "2025 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A37",
+    "before": "2024 SEASON  |  FINAL PLACEMENT",
+    "after": "2024 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A55",
+    "before": "2023 SEASON  |  FINAL PLACEMENT",
+    "after": "2023 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A73",
+    "before": "2022 SEASON  |  FINAL PLACEMENT",
+    "after": "2022 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A91",
+    "before": "2021 SEASON  |  FINAL PLACEMENT",
+    "after": "2021 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A109",
+    "before": "2020 SEASON  |  FINAL PLACEMENT",
+    "after": "2020 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A127",
+    "before": "2019 SEASON  |  FINAL PLACEMENT",
+    "after": "2019 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A145",
+    "before": "2018 SEASON  |  FINAL PLACEMENT",
+    "after": "2018 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A163",
+    "before": "2017 SEASON  |  FINAL PLACEMENT",
+    "after": "2017 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A181",
+    "before": "2016 SEASON  |  FINAL PLACEMENT",
+    "after": "2016 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A199",
+    "before": "2015 SEASON  |  FINAL PLACEMENT",
+    "after": "2015 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A217",
+    "before": "2014 SEASON  |  FINAL PLACEMENT",
+    "after": "2014 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A235",
+    "before": "2013 SEASON  |  FINAL PLACEMENT",
+    "after": "2013 Season  |  Final Placement"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A253",
+    "before": "2012 SEASON | YAHOO \u2014 FINAL STANDINGS",
+    "after": "2012 Season | Yahoo \u2014 Final Standings"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A271",
+    "before": "2011 SEASON | YAHOO \u2014 FINAL STANDINGS",
+    "after": "2011 Season | Yahoo \u2014 Final Standings"
+  },
+  {
+    "sheet": "Season History",
+    "cell": "A289",
+    "before": "2010 SEASON | YAHOO \u2014 FINAL STANDINGS",
+    "after": "2010 Season | Yahoo \u2014 Final Standings"
+  },
+  {
+    "sheet": "Matchups",
+    "cell": "P1",
+    "before": "Tied score; awarded winner",
+    "after": "Tied Score; Awarded Winner"
+  },
+  {
+    "sheet": "Finals & Titles",
+    "cell": "L1",
+    "before": "Sacko Runner-up",
+    "after": "Sacko Runner-Up"
+  },
+  {
+    "sheet": "Finals & Titles",
+    "cell": "N1",
+    "before": "Runner-up Score",
+    "after": "Runner-Up Score"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A1",
+    "before": "LEAGUE RECORD BOOK 2010\u2013PRESENT",
+    "after": "League Record Book 2010\u2013Present"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A2",
+    "before": "REGULAR SEASON RECORDS \u2014 WEEKLY COVERAGE 2013 ONWARD",
+    "after": "Regular Season Records \u2014 Weekly Coverage 2013 Onward"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A8",
+    "before": "CAREER RECORDS",
+    "after": "Career Records"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A14",
+    "before": "CHAMPIONSHIP FINAL RECORDS",
+    "after": "Championship Final Records"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A21",
+    "before": "SACKO FINAL RECORDS",
+    "after": "Sacko Final Records"
+  },
+  {
+    "sheet": "League Records",
+    "cell": "A28",
+    "before": "CAREER WALL OF SHAME",
+    "after": "Career Wall of Shame"
+  },
+  {
+    "sheet": "Sacko Bracket Audit",
+    "cell": "I1",
+    "before": "Bracket w",
+    "after": "Bracket W"
+  },
+  {
+    "sheet": "Sacko Bracket Audit",
+    "cell": "J1",
+    "before": "Manager in w",
+    "after": "Manager in W"
+  },
+  {
+    "sheet": "Sacko Bracket Audit",
+    "cell": "K1",
+    "before": "Bracket l",
+    "after": "Bracket L"
+  },
+  {
+    "sheet": "Sacko Bracket Audit",
+    "cell": "L1",
+    "before": "Manager in l",
+    "after": "Manager in L"
+  },
+  {
+    "sheet": "H2H Checkerboard",
+    "cell": "A1",
+    "before": "HEAD-TO-HEAD | MANAGER CHECKERBOARD (2010\u2013PRESENT)",
+    "after": "Head-to-Head | Manager Checkerboard (2010\u2013Present)"
+  },
+  {
+    "sheet": "H2H Checkerboard",
+    "cell": "A4",
+    "before": "REGULAR SEASON",
+    "after": "Regular Season"
+  },
+  {
+    "sheet": "H2H Checkerboard",
+    "cell": "A33",
+    "before": "WINNER'S BRACKET",
+    "after": "Winner's Bracket"
+  },
+  {
+    "sheet": "H2H Checkerboard",
+    "cell": "A62",
+    "before": "LOSER'S BRACKET",
+    "after": "Loser's Bracket"
+  },
+  {
+    "sheet": "2026 Live Source",
+    "cell": "I1",
+    "before": "LATEST COMPLETED WEEK",
+    "after": "Latest Completed Week"
+  },
+  {
+    "sheet": "PQ 2026 Matchups",
+    "cell": "A1",
+    "before": "season",
+    "after": "Season"
+  },
+  {
+    "sheet": "PQ 2026 Matchups",
+    "cell": "B1",
+    "before": "week",
+    "after": "Week"
+  },
+  {
+    "sheet": "PQ 2026 Matchups",
+    "cell": "E1",
+    "before": "points",
+    "after": "Points"
+  },
+  {
+    "sheet": "PQ 2026 Matchups",
+    "cell": "G1",
+    "before": "status",
+    "after": "Status"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "A1",
+    "before": "H2H LIVE EXPLORER | 2010\u2013PRESENT",
+    "after": "H2H Live Explorer | 2010\u2013Present"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "A5",
+    "before": "Regular season and postseason statistics",
+    "after": "Regular Season and Postseason Statistics"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "A32",
+    "before": "TOTAL",
+    "after": "Total"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "A36",
+    "before": "CHAMPIONSHIP / SACKO FINALS \u2014 SUBSETS OF BRACKET TOTALS",
+    "after": "Championship / Sacko Finals \u2014 Subsets of Bracket Totals"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "B37",
+    "before": "Champion-ship Final Wins",
+    "after": "Champion-Ship Final Wins"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "C37",
+    "before": "Champion-ship Final Losses",
+    "after": "Champion-Ship Final Losses"
+  },
+  {
+    "sheet": "H2H Live Explorer",
+    "cell": "A63",
+    "before": "TOTAL",
+    "after": "Total"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "C1",
+    "before": "Regular-season weeks",
+    "after": "Regular-Season Weeks"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "D1",
+    "before": "Playoff weeks",
+    "after": "Playoff Weeks"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "E1",
+    "before": "Playoff teams",
+    "after": "Playoff Teams"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "G1",
+    "before": "Kicker slots",
+    "after": "Kicker Slots"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "H1",
+    "before": "Points per reception",
+    "after": "Points per Reception"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "I1",
+    "before": "Passing TD points",
+    "after": "Passing TD Points"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "J1",
+    "before": "Sacko rule",
+    "after": "Sacko Rule"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "A18",
+    "before": "SCORING SETTINGS BY SEASON \u2014 ESPN AND SLEEPER",
+    "after": "Scoring Settings by Season \u2014 ESPN and Sleeper"
+  },
+  {
+    "sheet": "Scoring Breakdown YoY",
+    "cell": "B19",
+    "before": "Scoring rule",
+    "after": "Scoring Rule"
+  },
+  {
+    "sheet": "History Notes",
+    "cell": "B1",
+    "before": "Record / source",
+    "after": "Record / Source"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A5",
+    "before": "THE RULE: one H2H result + one median result per regular-season week",
+    "after": "The Rule: One H2H Result + One Median Result per Regular-Season Week"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A7",
+    "before": "ALL-SEASON IMPACT \u2022 newest first \u2022 hypothetical results, not championship credits",
+    "after": "All-Season Impact \u2022 Newest First \u2022 Hypothetical Results, Not Championship Credits"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "D8",
+    "before": "New entrants",
+    "after": "New Entrants"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "E8",
+    "before": "Enters top six",
+    "after": "Enters Top Six"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "H8",
+    "before": "Leaves top six",
+    "after": "Leaves Top Six"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "K8",
+    "before": "Hypothetical champion",
+    "after": "Hypothetical Champion"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "Q8",
+    "before": "Replay coverage",
+    "after": "Replay Coverage"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A24",
+    "before": "SELECTED SEASON \u2022 standings and playoff consequences",
+    "after": "Selected Season \u2022 Standings and Playoff Consequences"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "B29",
+    "before": "Actual seed",
+    "after": "Actual Seed"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "M29",
+    "before": "New seed",
+    "after": "New Seed"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "O29",
+    "before": "Playoff impact",
+    "after": "Playoff Impact"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A58",
+    "before": "Weekly median",
+    "after": "Weekly Median"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A63",
+    "before": "HYPOTHETICAL POSTSEASON \u2022 actual weekly lineups/scores in a newly seeded historical bracket",
+    "after": "Hypothetical Postseason \u2022 Actual Weekly Lineups/Scores in a Newly Seeded Historical Bracket"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "B65",
+    "before": "Bracket / final",
+    "after": "Bracket / Final"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "M65",
+    "before": "Score winner",
+    "after": "Score Winner"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "P65",
+    "before": "Result / coverage",
+    "after": "Result / Coverage"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "A85",
+    "before": "HOW TO READ THIS \u2022 a controlled counterfactual, not a new record book",
+    "after": "How to Read This \u2022 a Controlled Counterfactual, Not a New Record Book"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "E111",
+    "before": "Net entries",
+    "after": "Net Entries"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "F111",
+    "before": "Avg rank gain",
+    "after": "Avg Rank Gain"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "G111",
+    "before": "Median win %",
+    "after": "Median Win %"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "H111",
+    "before": "H2H win %",
+    "after": "H2H Win %"
+  },
+  {
+    "sheet": "Settings Change Review",
+    "cell": "I111",
+    "before": "Median advantage / season",
+    "after": "Median Advantage / Season"
+  },
+  {
+    "sheet": "TEST INFORMATION",
+    "cell": "Q1",
+    "before": "VIEW ONLY",
+    "after": "View Only"
+  },
+  {
+    "sheet": "Refresh Instructions",
+    "cell": "A1",
+    "before": "V7 \u2014 PRIVATE MASTER AND SHARED VIEWING COPY",
+    "after": "V7 \u2014 Private Master and Shared Viewing Copy"
+  },
+  {
+    "sheet": "ESPN Owners",
+    "cell": "C1",
+    "before": "Team name as exported",
+    "after": "Team Name as Exported"
+  },
+  {
+    "sheet": "ESPN Owners",
+    "cell": "E1",
+    "before": "Owner as exported",
+    "after": "Owner as Exported"
+  },
+  {
+    "sheet": "ESPN Owners",
+    "cell": "H1",
+    "before": "Identity evidence",
+    "after": "Identity Evidence"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "D1",
+    "before": "Position-specific overrides (JSON)",
+    "after": "Position-Specific Overrides (JSON)"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "E1",
+    "before": "Reverse item",
+    "after": "Reverse Item"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "F1",
+    "before": "Source file",
+    "after": "Source File"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "G1",
+    "before": "Scoring rule",
+    "after": "Scoring Rule"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "H1",
+    "before": "Category / applies to",
+    "after": "Category / Applies To"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "I1",
+    "before": "Effective points",
+    "after": "Effective Points"
+  },
+  {
+    "sheet": "Scoring Rules",
+    "cell": "J1",
+    "before": "Value selection",
+    "after": "Value Selection"
+  }
+]

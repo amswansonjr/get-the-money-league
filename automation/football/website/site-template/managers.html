@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager Profiles | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.6 system-ui,sans-serif; }
+    main { max-width:1200px; margin:auto; padding:32px 20px; }
+    a,a:visited { color:#f5d77a; text-underline-offset:3px; } a:hover { color:white; }
+    a:focus-visible,select:focus-visible { outline:2px solid #f5d77a; outline-offset:4px; }
+    h1,h2 { line-height:1.2; } .eyebrow { color:#f5d77a; font-weight:700; letter-spacing:.08em; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; }
+    select { display:block; box-sizing:border-box; max-width:100%; margin:6px 0 24px; padding:12px; background:#25323e; color:white; border:1px solid #aab7c4; border-radius:6px; font:inherit; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; }
+    .card { padding:18px; border:1px solid #46515b; border-radius:10px; background:#192530; }
+    .card p { margin:0; } .value { display:block; font-size:1.6rem; color:#f5d77a; font-weight:700; }
+    .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:16px; font-weight:600; }
+    th,td { padding:12px 16px; text-align:left; border-top:1px solid #38434d; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    footer,.muted { color:#c1cbd3; } footer { margin-top:24px; }
+    footer,.muted,.subtext,#load-status,#participation,#current-season { font-style:italic; }
+    label { font-weight:700; }
+    .bracket-chart { margin:24px 0; padding:20px; background:#192530; border:1px solid #46515b; border-radius:10px; }
+    .bar-track { height:24px; background:#101820; border:1px solid #687785; border-radius:4px; overflow:hidden; margin:6px 0 18px; }
+    .bar-fill { height:100%; } .playoffs { background:#f5d77a; } .sacko { background:#8fc7f4; }
+    .season-chips { display:flex; gap:10px; flex-wrap:wrap; padding:0; list-style:none; }
+    .season-chips li { border:1px solid #687785; border-left:6px solid #f5d77a; padding:8px 12px; border-radius:4px; }
+    .season-chips li.sacko-season { border-left-color:#8fc7f4; }
+  </style>
+  <script src="./presentation.js" defer></script><script src="./managers.js" defer></script>
+<link rel="stylesheet" href="./navigation.css">
+<script src="./navigation.js" defer></script>
+<link rel="stylesheet" href="./site.css">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body><main>
+  <nav class="league-nav" aria-label="League pages">
+  <a href="./">Home</a>
+  <a href="./standings.html">Current Standings</a>
+  <a href="./history.html">Season History</a>
+  <a href="./managers.html">Manager Profiles</a>
+  <a href="./h2h.html">Head-to-Head</a>
+  <a href="./recaps.html">Weekly Recaps</a>
+</nav>
+  <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
+  <h1>Manager Profiles</h1>
+  <p class="subtext">Explore every manager in the saved league history, including former members.</p>
+  <p id="load-status" role="status">Loading saved manager history…</p>
+  <div id="profile-content" hidden>
+    <label for="manager-select">Choose a Manager</label>
+    <select id="manager-select" aria-controls="profile" aria-describedby="manager-count"></select>
+    <p id="manager-count" class="muted"></p>
+    <section id="profile" aria-labelledby="manager-name">
+      <div role="status" aria-live="polite"><h2 id="manager-name"></h2><p id="participation"></p></div>
+      <div class="cards">
+        <div class="card"><p>Completed seasons <span class="value" id="completed-seasons"></span></p></div>
+        <div class="card"><p>Regular-season W–L–T <span class="value" id="career-record"></span></p></div>
+        <div class="card"><p>Regular-season win rate <span class="value" id="win-rate"></span></p></div>
+        <div class="card"><p>Championship credits <span class="value" id="title-count"></span></p></div>
+      </div>
+      <p class="muted">Career record and win rate include completed seasons only. Ties count as half a win. Shared championships count as one title credit for each co-champion.</p>
+      <p id="titles"></p>
+      <p id="current-season"></p>
+      <section class="bracket-chart" aria-labelledby="bracket-heading">
+        <h3 id="bracket-heading">Where Your Completed Seasons Landed</h3>
+        <p id="bracket-summary"></p>
+        <p id="playoff-label"></p>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill playoffs" id="playoff-bar"></div></div>
+        <p id="sacko-label"></p>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill sacko" id="sacko-bar"></div></div>
+        <p class="muted">Both bars use all of this manager’s completed seasons as their full width. Playoffs = championship bracket. Loser’s bracket = consolation tournament entry, regardless of eventual finish. 2026 is excluded.</p>
+        <ul class="season-chips" id="bracket-seasons" aria-label="Tournament by completed season"></ul>
+      </section>
+      <div class="scroll" role="region" aria-label="Manager season history" tabindex="0">
+        <table><caption>Season-by-Season Results · Newest First</caption>
+          <thead><tr><th scope="col">Season</th><th scope="col">Team</th><th scope="col">Regular-Season Record</th><th scope="col">Reg. Rank</th><th scope="col">Final Placement</th><th scope="col" class="number">Regular-Season Points For (Rank)</th><th scope="col" class="number">Regular-Season Points Against (Rank)</th><th scope="col">Tournament</th></tr></thead>
+          <tbody id="manager-seasons"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <noscript><p>Enable JavaScript to explore profiles, or <a href="./history.json">open the saved data</a>.</p></noscript>
+  <p class="subtext">Parentheses show the category rank among all teams within that season: Points For ranks highest first; Points Against ranks lowest first. Ties share a rank.</p><footer>Saved workbook snapshot; no live refresh. — means unavailable. PF = points for; PA = points against. Scoring rules changed across seasons; raw points are not directly comparable.</footer>
+</main></body>
+</html>

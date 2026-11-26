@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Head-to-Head | GET THE $$$$</title>
+  <style>
+    body { margin:0; background:#101820; color:#f4f6f8; font:16px/1.6 system-ui,sans-serif; }
+    main { max-width:1200px; margin:auto; padding:32px 20px; }
+    a,a:visited { color:#f5d77a; text-underline-offset:3px; } a:hover { color:white; }
+    :focus-visible { outline:2px solid #f5d77a; outline-offset:4px; }
+    h1,h2 { line-height:1.2; } .eyebrow { color:#f5d77a; font-weight:700; letter-spacing:.08em; }
+    nav,.controls { display:flex; gap:20px; flex-wrap:wrap; } label { font-weight:700; }
+    select { display:block; max-width:100%; margin:6px 0 18px; padding:12px; background:#25323e; color:white; border:1px solid #aab7c4; border-radius:6px; font:inherit; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .card { padding:18px; border:1px solid #46515b; border-radius:10px; background:#192530; }
+    .value { display:block; font-size:1.8rem; color:#f5d77a; font-weight:700; }
+    .track { height:20px; background:#101820; margin-top:12px; border:1px solid #687785; }
+    .fill { height:100%; background:#f5d77a; } .blue { background:#8fc7f4; }
+    .scroll { overflow-x:auto; border:1px solid #46515b; border-radius:10px; margin-top:24px; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; }
+    caption { text-align:left; padding:16px; font-weight:600; }
+    th,td { padding:12px 16px; text-align:left; border-top:1px solid #38434d; }
+    thead { background:#25323e; } tbody tr:nth-child(even) { background:#192530; }
+    .number { text-align:right; font-variant-numeric:tabular-nums; }
+    footer,.subtext { font-style:italic; color:#c1cbd3; } footer { margin-top:24px; }
+    .checkerboard { max-height:620px; overflow:auto; }
+    .checkerboard thead th { position:sticky; top:0; background:#25323e; z-index:2; }
+    .checkerboard th:first-child { position:sticky; left:0; background:#25323e; z-index:1; }
+    .checkerboard thead th:first-child { z-index:3; }
+    .checkerboard th,.checkerboard td { padding:8px; }
+    .checkerboard button { min-width:80px; padding:10px; border:1px solid #82909b; border-radius:4px; color:#fff; background:#34424f; font:inherit; cursor:pointer; }
+    .checkerboard button.positive { background:#174b36; color:#c8f5d9; }
+    .checkerboard button.negative { background:#642b33; color:#ffe0e3; }
+    .checkerboard button[aria-pressed="true"] { outline:3px solid #f5d77a; outline-offset:-3px; }
+    .checkerboard button:hover { text-decoration:underline; }
+  </style>
+  <script src="./presentation.js" defer></script><script src="./h2h.js" defer></script>
+<link rel="stylesheet" href="./navigation.css">
+<script src="./navigation.js" defer></script>
+<link rel="stylesheet" href="./site.css">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body><main>
+<nav class="league-nav" aria-label="League pages">
+  <a href="./">Home</a>
+  <a href="./standings.html">Current Standings</a>
+  <a href="./history.html">Season History</a>
+  <a href="./managers.html">Manager Profiles</a>
+  <a href="./h2h.html">Head-to-Head</a>
+  <a href="./recaps.html">Weekly Recaps</a>
+</nav>
+  <p class="eyebrow">GET THE $$$$ · LEAGUE HEADQUARTERS</p>
+  <h1>Head-to-Head</h1>
+  <p class="subtext">Choose two managers and explore their recorded rivalry.</p>
+  <p id="load-status" class="subtext" role="status">Loading saved matchups…</p>
+  <p id="coverage-note" class="subtext">2010–2012: recovered postseason games only. Regular-season H2H begins in 2013. The current-season coverage is recorded in the saved snapshot. Missing games are not evidence that managers never met.</p>
+  <div id="h2h-content" hidden>
+    <div class="controls">
+      <label>First Manager<select id="manager-a"></select></label>
+      <label>Second Manager<select id="manager-b"></select></label>
+      <label>Competition<select id="competition"><option value="all">All Games</option>Regular Season</option><option value="Championship playoffs">Championship Playoffs</option><option value="Loser’s bracket">Loser’s Bracket</option><option value="championship">Championship Final Only</option><option value="sacko">Sacko Matchup Only</option></select></label>
+      <label>Season<select id="season"><option value="all">All Seasons</option></select></label>
+    </div>
+    <p id="summary" role="status" aria-live="polite"></p>
+    <div id="results" hidden>
+      <div class="cards">
+        <div class="card"><h2 id="name-a"></h2><span class="value" id="wins-a"></span><p id="points-a"></p><div class="track" aria-hidden="true"><div class="fill" id="bar-a"></div></div></div>
+        <div class="card"><h2>Ties</h2><span class="value" id="ties"></span><p class="subtext">Bars show wins as a share of recorded games under the selected filters.</p></div>
+        <div class="card"><h2 id="name-b"></h2><span class="value" id="wins-b"></span><p id="points-b"></p><div class="track" aria-hidden="true"><div class="fill blue" id="bar-b"></div></div></div>
+      </div>
+      <p class="subtext">Recorded winners determine results. An awarded win at a tied score is labeled in the table. The 2022 shared title does not change its recorded matchup winner.</p>
+      <div class="scroll" role="region" aria-label="Recorded matchup history" tabindex="0"><table>
+        <caption>Recorded Matchups · Newest First</caption>
+        <thead><tr><th scope="col">Season</th><th scope="col">Week</th><th scope="col">Competition</th><th scope="col" id="score-a-heading">First Manager</th><th scope="col" id="score-b-heading">Second Manager</th><th scope="col">Result</th><th scope="col">Note</th></tr></thead>
+        <tbody id="matchup-body"></tbody>
+      </table></div>
+    </div>
+    <section aria-labelledby="checkerboard-heading">
+      <h2 id="checkerboard-heading">League Rivalry Checkerboard</h2>
+      <p class="subtext">Read across a row: each cell shows that manager’s W–L–T against the column opponent. Green = winning record; red = losing record; neutral = even. — = no recorded matchups. Click a cell to show the rivalry above.</p>
+      <label for="matrix-scope">Managers Shown</label>
+      <select id="matrix-scope"><option value="current">Current-season managers</option><option value="all">All historical managers</option></select>
+      <p id="matrix-summary" class="subtext" role="status"></p>
+      <div class="scroll checkerboard" role="region" aria-label="Head-to-head checkerboard; scroll to see opponents" tabindex="0"><table>
+        <caption id="matrix-caption"></caption>
+        <thead id="matrix-head"></thead><tbody id="matrix-body"></tbody>
+      </table></div>
+    </section>
+  </div>
+  <noscript><p>Enable JavaScript to compare managers, or <a href="./h2h.json">open the saved data</a>.</p></noscript>
+  <footer>Saved workbook snapshot; no live refresh. Loser’s bracket means the consolation tournament. Sacko means its final matchup to avoid last place. Points reflect each season’s scoring rules.</footer>
+</main></body>
+</html>
