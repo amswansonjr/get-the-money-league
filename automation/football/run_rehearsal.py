@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Prepare-only owner-dispatched job. No public artifacts or OneDrive writes."""
-import contextlib,datetime,hashlib,io,json,os,re,shutil,subprocess,sys,tempfile,urllib.parse,urllib.request
+import contextlib,datetime,hashlib,io,json,os,re,shutil,subprocess,sys,tempfile,urllib.error,urllib.parse,urllib.request
 from pathlib import Path
 ORIGIN='https://football-league-admin.swansonfamily.workers.dev'
 REPOSITORY='https://github.com/amswansonjr/get-the-money-league.git'
+PHASE='START'
 BUNDLE=Path(__file__).resolve().parent
 sys.path.insert(0,str(BUNDLE/'workbook'))
 from onedrive_files import GraphFiles,NoRedirect
@@ -22,7 +23,12 @@ def api(job,operation,body=None,name=None):
     else:
         method='GET' if body is None else 'POST'
         if body is not None:body=json.dumps(body,allow_nan=False).encode();headers['Content-Type']='application/json'
-    return json.loads(request(url,method,body,headers))
+    try:return json.loads(request(url,method,body,headers))
+    except urllib.error.HTTPError as error:
+        try:code=json.loads(error.read(4096)).get('code','')
+        except Exception:code=''
+        safe=code if re.fullmatch(r'[A-Z0-9_]{1,80}',code) else 'REQUEST_REJECTED'
+        raise RuntimeError('ADMIN_'+operation.upper()+'_HTTP_'+str(error.code)+'_'+safe) from None
 def write(path,value):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value,indent=2)+'\n')
 def git(*args,cwd):
     result=subprocess.run(['git',*args],cwd=cwd,capture_output=True,env={**os.environ,'GIT_TERMINAL_PROMPT':'0'},check=True);return result.stdout.decode().strip()
@@ -65,20 +71,27 @@ def prepare(context,workspace,root,fixture=None):
     return files,report
 
 def main():
+    global PHASE
     job=os.environ.get('GTM_JOB_ID','')
     if not re.fullmatch(r'[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}',job):raise ValueError('INVALID_JOB_ID')
     if os.environ.get('GITHUB_REPOSITORY')!='amswansonjr/get-the-money-league' or os.environ.get('GITHUB_EVENT_NAME')!='workflow_dispatch':raise ValueError('OWNER_DISPATCH_REQUIRED')
+    PHASE='CONTEXT'
     context=api(job,'context');workspace=Path(os.environ['GITHUB_WORKSPACE']).resolve()
     if git('rev-parse','HEAD',cwd=workspace)!=context['baseCommit']:raise ValueError('CHECKOUT_CHANGED')
     with tempfile.TemporaryDirectory(prefix='football-private-',dir=os.environ.get('RUNNER_TEMP')) as temp:
+        PHASE='PREPARE'
         files,report=prepare(context,workspace,Path(temp))
+        PHASE='UPLOAD'
         for name,p in files.items():api(job,'file',p.read_bytes(),name)
+        PHASE='COMPLETE'
         receipt=api(job,'complete',report)
         if receipt.get('status')!='READY_FOR_REVIEW':raise ValueError('REVIEW_NOT_READY')
     print('READY FOR PRIVATE REVIEW. Website not published. OneDrive originals not replaced.')
 if __name__=='__main__':
     try:main()
-    except Exception:
+    except Exception as error:
+        safe=str(error) if re.fullmatch(r'[A-Z0-9_]{1,120}',str(error)) else type(error).__name__
+        print("Preparation stage: "+PHASE+"; code: "+safe,file=sys.stderr)
         try:
             if re.fullmatch(r'[0-9a-f-]{36}',os.environ.get('GTM_JOB_ID','')):api(os.environ['GTM_JOB_ID'],'failed',{})
         except Exception:pass
