@@ -7,7 +7,7 @@ REPOSITORY='https://github.com/amswansonjr/get-the-money-league.git'
 PHASE='START'
 BUNDLE=Path(__file__).resolve().parent
 sys.path.insert(0,str(BUNDLE/'workbook'))
-from onedrive_files import GraphFiles,NoRedirect
+from onedrive_files import GraphFiles,NoRedirect,allowed_transfer_url
 
 def request(url,method='GET',body=None,headers=None):
     with urllib.request.build_opener(NoRedirect()).open(urllib.request.Request(url,data=body,headers={'User-Agent':'LeagueHeadquarters-Cloud-Rehearsal/1.0','Accept':'application/json',**(headers or {})},method=method),timeout=60) as response:return response.read()
@@ -35,6 +35,11 @@ def git(*args,cwd):
 def prepare(context,workspace,root,fixture=None):
     if context['mode']!='PREPARE_ONLY':raise ValueError('PREPARE_ONLY_REQUIRED')
     client=GraphFiles(context['graphAccessToken'],context['targets']);metadata={k:client.metadata(k) for k in context['targets']}
+    for item in metadata.values():
+        url=item.get('@microsoft.graph.downloadUrl','')
+        if not allowed_transfer_url(url):
+            domain='.'.join((urllib.parse.urlsplit(url).hostname or 'missing').split('.')[-2:])
+            raise RuntimeError('TRANSFER_DOMAIN_'+re.sub(r'[^A-Z0-9]','_',domain.upper()))
     sources=root/'sources';sources.mkdir();paths={}
     for key in ('privateMaster','viewingCopy'):
         paths[key]=sources/(key+'.xlsx');paths[key].write_bytes(client.download(key,metadata[key]))
